@@ -1,0 +1,230 @@
+{
+  "label": "local_1000_run",
+  "orders": 150,
+  "completed_orders": 145,
+  "unclaimed_orders": 5,
+  "completion_rate": 0.9667,
+  "miles": 1223.32,
+  "total_pay": 3028.05,
+  "pay_per_mile": 2.48,
+  "avg_driver_wait_minutes": 13.44,
+  "total_driver_wait_minutes": 1949.1,
+  "zone_order_counts": {
+    "Polaris": 24,
+    "Westerville": 21,
+    "Easton": 22,
+    "Clintonville": 30,
+    "Gahanna": 30,
+    "Downtown": 23
+  },
+  "zone_completed_counts": {
+    "Polaris": 24,
+    "Westerville": 21,
+    "Easton": 21,
+    "Clintonville": 30,
+    "Gahanna": 26,
+    "Downtown": 23
+  },
+  "zone_driver_counts_before": {
+    "Polaris": 12,
+    "Westerville": 3,
+    "Easton": 4,
+    "Clintonville": 6,
+    "Gahanna": 5,
+    "Downtown": 10
+  },
+  "zone_driver_counts_after": {
+    "Polaris": 0,
+    "Westerville": 23,
+    "Easton": 4,
+    "Clintonville": 6,
+    "Gahanna": 5,
+    "Downtown": 2
+  },
+  "migrations": [
+    {
+      "driver_id": "D001",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D003",
+      "from_zone": "Downtown",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 4.97
+    },
+    {
+      "driver_id": "D005",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D007",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D009",
+      "from_zone": "Downtown",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 4.97
+    },
+    {
+      "driver_id": "D015",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D016",
+      "from_zone": "Downtown",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 4.97
+    },
+    {
+      "driver_id": "D021",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D023",
+      "from_zone": "Downtown",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 4.97
+    },
+    {
+      "driver_id": "D024",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D025",
+      "from_zone": "Downtown",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 4.97
+    },
+    {
+      "driver_id": "D026",
+      "from_zone": "Downtown",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 4.97
+    },
+    {
+      "driver_id": "D028",
+      "from_zone": "Downtown",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 4.97
+    },
+    {
+      "driver_id": "D029",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D030",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D031",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D032",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D033",
+      "from_zone": "Downtown",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 4.97
+    },
+    {
+      "driver_id": "D034",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    },
+    {
+      "driver_id": "D040",
+      "from_zone": "Polaris",
+      "to_zone": "Westerville",
+      "reason": "higher nearby pressure and better earning opportunity",
+      "pressure_gap": 5.2
+    }
+  ],
+  "pressure_before": {
+    "Polaris": {
+      "surge_multiplier": 1.15,
+      "dynamic_base_bonus": 1.0,
+      "pressure_score": 1.42,
+      "driver_attraction_score": 1.63,
+      "is_hot_zone": false
+    },
+    "Westerville": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 4.71,
+      "driver_attraction_score": 6.83,
+      "is_hot_zone": true
+    },
+    "Easton": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 3.73,
+      "driver_attraction_score": 5.41,
+      "is_hot_zone": true
+    },
+    "Clintonville": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 3.41,
+      "driver_attraction_score": 4.94,
+      "is_hot_zone": true
+    },
+    "Gahanna": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 4.06,
+      "driver_attraction_score": 5.89,
+      "is_hot_zone": true
+    },
+    "Downtown": {
+      "surge_multiplier": 1.15,
+      "dynamic_base_bonus": 1.0,
+      "pressure_score": 1.62,
+      "driver_attraction_score": 1.86,
+      "is_hot_zone": false
+    }
+  }
+}

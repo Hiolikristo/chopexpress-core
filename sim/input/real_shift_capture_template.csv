@@ -1,0 +1,4 @@
+shift_id,date,platform,driver_name,zone,start_time,end_time,hours_online,start_odometer,end_odometer,total_miles,fuel_gallons,fuel_cost,completed_orders,base_pay,tips,total_pay,screenshot_earnings,screenshot_map,screenshot_fuel_receipt,traffic_notes,restaurant_delay_notes,weather_notes,validation_status
+SHIFT-001,2026-03-08,DoorDash,Driver A,Gahanna,10:00,16:00,6.0,120500,120526.4,26.4,0.72,8.20,18,82.50,18.00,100.50,earnings_001.png,map_001.png,fuel_001.png,normal,minor wait at pickup,clear,pending
+SHIFT-002,2026-03-08,DoorDash,Driver A,Polaris,17:00,22:00,5.0,120526.4,120551.2,24.8,0.70,8.00,13,71.00,12.00,83.00,earnings_002.png,map_002.png,fuel_002.png,moderate traffic,heavy restaurant delay,clear,pending
+SHIFT-003,2026-03-08,UberEats,Driver A,Downtown,22:30,03:30,5.0,120551.2,120582.4,31.2,0.88,10.30,7,96.25,21.50,117.75,earnings_003.png,map_003.png,fuel_003.png,light traffic,normal,clear,pending

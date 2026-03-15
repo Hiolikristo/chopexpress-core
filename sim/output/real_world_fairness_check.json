@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-03-12T20:09:51.909076Z",
+  "framework": "ChopExpress V1 fairness-first economics",
+  "findings": {
+    "avg_pay_per_mile_gap": 0.51,
+    "avg_hourly_gap": 6.9,
+    "dd_style_approval_rate": 49.76,
+    "chopexpress_approval_rate": 100.0,
+    "migration_signal_rate": 58.05
+  },
+  "interpretation": {
+    "pay_model_direction": "ChopExpress outperforming DoorDash-style economics",
+    "driver_retention_signal": "Strong migration potential"
+  }
+}

@@ -1,0 +1,5 @@
+date,platform,zone,miles,earnings,orders,hours,fuel_cost,other_cost
+2026-03-08,doordash,Easton,18.2,42.50,5,1.4,4.20,0.50
+2026-03-08,uber_eats,Clintonville,12.5,29.00,3,1.0,2.80,0.25
+2026-03-09,doordash,Easton,24.1,51.75,6,1.8,5.40,0.40
+2026-03-10,doordash,Clintonville,31.6,63.20,7,2.4,7.10,0.60

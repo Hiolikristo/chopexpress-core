@@ -1,0 +1,717 @@
+{
+  "label": "local_24h_run",
+  "orders": 250,
+  "completed_orders": 246,
+  "unclaimed_orders": 4,
+  "completion_rate": 0.984,
+  "miles": 2030.42,
+  "total_pay": 5058.8,
+  "avg_driver_wait_minutes": 15.15,
+  "total_driver_wait_minutes": 3726.82,
+  "total_active_minutes": 9832.1,
+  "avg_offer_response_seconds": 24.57,
+  "total_redispatch_attempts": 96,
+  "earnings_summary": {
+    "gross_pay": 5058.8,
+    "fuel_cost": 291.87,
+    "maintenance_cost": 284.26,
+    "net_pay": 4482.67,
+    "pay_per_mile": 2.49,
+    "net_per_mile": 2.21,
+    "hourly_gross": 30.87,
+    "hourly_net": 27.36
+  },
+  "hourly_order_counts": {
+    "0": 0,
+    "1": 3,
+    "2": 1,
+    "3": 2,
+    "4": 2,
+    "5": 1,
+    "6": 4,
+    "7": 2,
+    "8": 3,
+    "9": 10,
+    "10": 7,
+    "11": 21,
+    "12": 18,
+    "13": 21,
+    "14": 19,
+    "15": 11,
+    "16": 14,
+    "17": 17,
+    "18": 22,
+    "19": 23,
+    "20": 23,
+    "21": 10,
+    "22": 13,
+    "23": 3
+  },
+  "hourly_completed_counts": {
+    "0": 0,
+    "1": 3,
+    "2": 1,
+    "3": 2,
+    "4": 2,
+    "5": 1,
+    "6": 4,
+    "7": 2,
+    "8": 3,
+    "9": 10,
+    "10": 7,
+    "11": 21,
+    "12": 18,
+    "13": 21,
+    "14": 19,
+    "15": 11,
+    "16": 14,
+    "17": 15,
+    "18": 20,
+    "19": 23,
+    "20": 23,
+    "21": 10,
+    "22": 13,
+    "23": 3
+  },
+  "zone_order_counts": {
+    "Polaris": 52,
+    "Westerville": 43,
+    "Easton": 36,
+    "Clintonville": 40,
+    "Gahanna": 34,
+    "Downtown": 45
+  },
+  "zone_completed_counts": {
+    "Polaris": 52,
+    "Westerville": 43,
+    "Easton": 35,
+    "Clintonville": 39,
+    "Gahanna": 34,
+    "Downtown": 43
+  },
+  "zone_driver_counts_before": {
+    "Polaris": 13,
+    "Westerville": 7,
+    "Easton": 5,
+    "Clintonville": 8,
+    "Gahanna": 7,
+    "Downtown": 15
+  },
+  "zone_driver_counts_after": {
+    "Polaris": 0,
+    "Westerville": 2,
+    "Easton": 53,
+    "Clintonville": 0,
+    "Gahanna": 0,
+    "Downtown": 0
+  },
+  "strategy_decisions": [
+    {
+      "driver_id": "D001",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D002",
+      "action": "reposition",
+      "from_zone": "Gahanna",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.22
+    },
+    {
+      "driver_id": "D003",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D004",
+      "action": "hold",
+      "from_zone": "Westerville",
+      "to_zone": "Westerville",
+      "reason": "holding strong zone position",
+      "attractiveness_gain": 0.0
+    },
+    {
+      "driver_id": "D005",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D006",
+      "action": "reposition",
+      "from_zone": "Clintonville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.08
+    },
+    {
+      "driver_id": "D007",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D008",
+      "action": "hold",
+      "from_zone": "Easton",
+      "to_zone": "Easton",
+      "reason": "holding strong zone position",
+      "attractiveness_gain": 0.0
+    },
+    {
+      "driver_id": "D009",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D010",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D011",
+      "action": "hold",
+      "from_zone": "Easton",
+      "to_zone": "Easton",
+      "reason": "holding strong zone position",
+      "attractiveness_gain": 0.0
+    },
+    {
+      "driver_id": "D012",
+      "action": "reposition",
+      "from_zone": "Clintonville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.08
+    },
+    {
+      "driver_id": "D013",
+      "action": "hold",
+      "from_zone": "Easton",
+      "to_zone": "Easton",
+      "reason": "holding strong zone position",
+      "attractiveness_gain": 0.0
+    },
+    {
+      "driver_id": "D014",
+      "action": "reposition",
+      "from_zone": "Clintonville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.08
+    },
+    {
+      "driver_id": "D015",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D016",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D017",
+      "action": "reposition",
+      "from_zone": "Clintonville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.08
+    },
+    {
+      "driver_id": "D018",
+      "action": "reposition",
+      "from_zone": "Gahanna",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.22
+    },
+    {
+      "driver_id": "D019",
+      "action": "reposition",
+      "from_zone": "Westerville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 1.0
+    },
+    {
+      "driver_id": "D020",
+      "action": "hold",
+      "from_zone": "Easton",
+      "to_zone": "Easton",
+      "reason": "holding strong zone position",
+      "attractiveness_gain": 0.0
+    },
+    {
+      "driver_id": "D021",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D022",
+      "action": "reposition",
+      "from_zone": "Gahanna",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.22
+    },
+    {
+      "driver_id": "D023",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D024",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D025",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D026",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D027",
+      "action": "reposition",
+      "from_zone": "Clintonville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.08
+    },
+    {
+      "driver_id": "D028",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D029",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D030",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D031",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D032",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D033",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D034",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D035",
+      "action": "reposition",
+      "from_zone": "Gahanna",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.22
+    },
+    {
+      "driver_id": "D036",
+      "action": "reposition",
+      "from_zone": "Westerville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 1.0
+    },
+    {
+      "driver_id": "D037",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D038",
+      "action": "reposition",
+      "from_zone": "Clintonville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.08
+    },
+    {
+      "driver_id": "D039",
+      "action": "reposition",
+      "from_zone": "Gahanna",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.22
+    },
+    {
+      "driver_id": "D040",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D041",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D042",
+      "action": "hold",
+      "from_zone": "Easton",
+      "to_zone": "Easton",
+      "reason": "holding strong zone position",
+      "attractiveness_gain": 0.0
+    },
+    {
+      "driver_id": "D043",
+      "action": "reposition",
+      "from_zone": "Westerville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 1.0
+    },
+    {
+      "driver_id": "D044",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D045",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D046",
+      "action": "reposition",
+      "from_zone": "Westerville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 1.0
+    },
+    {
+      "driver_id": "D047",
+      "action": "reposition",
+      "from_zone": "Polaris",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 3.03
+    },
+    {
+      "driver_id": "D048",
+      "action": "reposition",
+      "from_zone": "Clintonville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.08
+    },
+    {
+      "driver_id": "D049",
+      "action": "reposition",
+      "from_zone": "Westerville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 1.0
+    },
+    {
+      "driver_id": "D050",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D051",
+      "action": "hold",
+      "from_zone": "Westerville",
+      "to_zone": "Westerville",
+      "reason": "holding strong zone position",
+      "attractiveness_gain": 0.0
+    },
+    {
+      "driver_id": "D052",
+      "action": "reposition",
+      "from_zone": "Downtown",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 4.3
+    },
+    {
+      "driver_id": "D053",
+      "action": "reposition",
+      "from_zone": "Clintonville",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.08
+    },
+    {
+      "driver_id": "D054",
+      "action": "reposition",
+      "from_zone": "Gahanna",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.22
+    },
+    {
+      "driver_id": "D055",
+      "action": "reposition",
+      "from_zone": "Gahanna",
+      "to_zone": "Easton",
+      "reason": "chasing stronger earnings opportunity",
+      "attractiveness_gain": 2.22
+    }
+  ],
+  "migrations": [],
+  "pressure_before": {
+    "Polaris": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 2.75,
+      "driver_attraction_score": 3.99,
+      "is_hot_zone": true
+    },
+    "Westerville": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 4.15,
+      "driver_attraction_score": 6.02,
+      "is_hot_zone": true
+    },
+    "Easton": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 4.84,
+      "driver_attraction_score": 7.02,
+      "is_hot_zone": true
+    },
+    "Clintonville": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 3.41,
+      "driver_attraction_score": 4.94,
+      "is_hot_zone": true
+    },
+    "Gahanna": {
+      "surge_multiplier": 1.45,
+      "dynamic_base_bonus": 3.5,
+      "pressure_score": 3.31,
+      "driver_attraction_score": 4.8,
+      "is_hot_zone": true
+    },
+    "Downtown": {
+      "surge_multiplier": 1.3,
+      "dynamic_base_bonus": 2.25,
+      "pressure_score": 2.09,
+      "driver_attraction_score": 2.72,
+      "is_hot_zone": true
+    }
+  },
+  "clock_profile": {
+    "0": {
+      "demand_multiplier": 0.22,
+      "speed_multiplier": 1.12,
+      "merchant_rush_bias": 0.0
+    },
+    "1": {
+      "demand_multiplier": 0.22,
+      "speed_multiplier": 1.12,
+      "merchant_rush_bias": 0.0
+    },
+    "2": {
+      "demand_multiplier": 0.22,
+      "speed_multiplier": 1.12,
+      "merchant_rush_bias": 0.0
+    },
+    "3": {
+      "demand_multiplier": 0.22,
+      "speed_multiplier": 1.12,
+      "merchant_rush_bias": 0.0
+    },
+    "4": {
+      "demand_multiplier": 0.22,
+      "speed_multiplier": 1.12,
+      "merchant_rush_bias": 0.0
+    },
+    "5": {
+      "demand_multiplier": 0.22,
+      "speed_multiplier": 1.12,
+      "merchant_rush_bias": 0.0
+    },
+    "6": {
+      "demand_multiplier": 0.55,
+      "speed_multiplier": 0.82,
+      "merchant_rush_bias": 0.0
+    },
+    "7": {
+      "demand_multiplier": 0.55,
+      "speed_multiplier": 0.82,
+      "merchant_rush_bias": 0.0
+    },
+    "8": {
+      "demand_multiplier": 0.55,
+      "speed_multiplier": 0.82,
+      "merchant_rush_bias": 0.0
+    },
+    "9": {
+      "demand_multiplier": 0.78,
+      "speed_multiplier": 0.92,
+      "merchant_rush_bias": 0.0
+    },
+    "10": {
+      "demand_multiplier": 0.78,
+      "speed_multiplier": 0.92,
+      "merchant_rush_bias": 0.0
+    },
+    "11": {
+      "demand_multiplier": 1.45,
+      "speed_multiplier": 0.76,
+      "merchant_rush_bias": 1.0
+    },
+    "12": {
+      "demand_multiplier": 1.45,
+      "speed_multiplier": 0.76,
+      "merchant_rush_bias": 1.0
+    },
+    "13": {
+      "demand_multiplier": 1.45,
+      "speed_multiplier": 0.76,
+      "merchant_rush_bias": 1.0
+    },
+    "14": {
+      "demand_multiplier": 0.92,
+      "speed_multiplier": 0.95,
+      "merchant_rush_bias": 0.0
+    },
+    "15": {
+      "demand_multiplier": 0.92,
+      "speed_multiplier": 0.95,
+      "merchant_rush_bias": 0.0
+    },
+    "16": {
+      "demand_multiplier": 0.92,
+      "speed_multiplier": 0.95,
+      "merchant_rush_bias": 0.0
+    },
+    "17": {
+      "demand_multiplier": 1.62,
+      "speed_multiplier": 0.72,
+      "merchant_rush_bias": 1.0
+    },
+    "18": {
+      "demand_multiplier": 1.62,
+      "speed_multiplier": 0.72,
+      "merchant_rush_bias": 1.0
+    },
+    "19": {
+      "demand_multiplier": 1.62,
+      "speed_multiplier": 0.72,
+      "merchant_rush_bias": 1.0
+    },
+    "20": {
+      "demand_multiplier": 1.62,
+      "speed_multiplier": 0.72,
+      "merchant_rush_bias": 1.0
+    },
+    "21": {
+      "demand_multiplier": 0.72,
+      "speed_multiplier": 0.96,
+      "merchant_rush_bias": 0.0
+    },
+    "22": {
+      "demand_multiplier": 0.72,
+      "speed_multiplier": 0.96,
+      "merchant_rush_bias": 0.0
+    },
+    "23": {
+      "demand_multiplier": 0.72,
+      "speed_multiplier": 0.96,
+      "merchant_rush_bias": 0.0
+    }
+  }
+}

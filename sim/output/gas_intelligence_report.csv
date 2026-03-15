@@ -1,0 +1,8 @@
+date,platform,zone,miles,earnings,orders,hours,fuel_cost,other_cost,estimated_fuel_cost
+2026-03-10,chop_express,Clintonville,443.19,816.37,70,30.5,84.21,48.75,61.869324
+2026-03-10,chop_express,Dublin,456.08,721.45,53,28.52,86.66,50.17,63.668768
+2026-03-10,chop_express,Easton,516.22,918.86,69,34.16,98.08,56.78,72.064312
+2026-03-10,chop_express,OSU Campus,336.99,659.71,69,27.18,64.03,37.07,47.043804
+2026-03-10,chop_express,Polaris,527.23,826.55,66,33.68,100.17,58.0,73.601308
+2026-03-10,chop_express,Short North,503.42,973.59,85,36.34,95.65,55.38,70.277432
+2026-03-10,chop_express,Westerville,381.38,592.32,50,25.01,72.46,41.95,53.240648

@@ -1,0 +1,10 @@
+class OrderState:
+    CREATED = "created"
+    ASSIGNED = "assigned"
+    DRIVER_EN_ROUTE = "driver_en_route"
+    ARRIVED_RESTAURANT = "arrived_restaurant"
+    ORDER_READY = "order_ready"
+    PICKED_UP = "picked_up"
+    EN_ROUTE_CUSTOMER = "en_route_customer"
+    ARRIVED_CUSTOMER = "arrived_customer"
+    DELIVERED = "delivered"

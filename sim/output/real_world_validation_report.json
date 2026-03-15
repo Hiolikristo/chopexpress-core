@@ -1,0 +1,68 @@
+{
+  "real_world": {
+    "runs_loaded": 4,
+    "total_miles": 86.4,
+    "total_earnings": 186.45,
+    "total_orders": 21,
+    "total_hours": 6.6,
+    "fuel_cost": 19.5,
+    "other_cost": 1.75,
+    "total_cost": 21.25,
+    "total_net_profit": 165.2,
+    "pay_per_mile": 2.158,
+    "pay_per_order": 8.8786,
+    "hourly_rate": 28.25,
+    "net_hourly_rate": 25.0303,
+    "cost_per_mile": 0.2459,
+    "avg_orders_per_run": 5.25
+  },
+  "chop_model": {
+    "runs_loaded": 0,
+    "total_miles": 0.0,
+    "total_earnings": 0.0,
+    "total_orders": 0,
+    "total_hours": 0.0,
+    "total_cost": 0.0,
+    "total_net_profit": 0.0,
+    "pay_per_mile": 0.0,
+    "pay_per_order": 0.0,
+    "hourly_rate": 0.0,
+    "net_hourly_rate": 0.0,
+    "cost_per_mile": 0.0,
+    "avg_orders_per_run": 0.0
+  },
+  "doordash_model": {
+    "runs_loaded": 0,
+    "total_miles": 0.0,
+    "total_earnings": 0.0,
+    "total_orders": 0,
+    "total_hours": 0.0,
+    "total_cost": 0.0,
+    "total_net_profit": 0.0,
+    "pay_per_mile": 0.0,
+    "pay_per_order": 0.0,
+    "hourly_rate": 0.0,
+    "net_hourly_rate": 0.0,
+    "cost_per_mile": 0.0,
+    "avg_orders_per_run": 0.0
+  },
+  "comparison": {
+    "chop_vs_real": {
+      "pay_per_mile_diff": -2.158,
+      "pay_per_order_diff": -8.8786,
+      "hourly_rate_diff": -28.25,
+      "net_hourly_rate_diff": -25.0303,
+      "cost_per_mile_diff": -0.2459,
+      "chop_beats_real_pay_per_mile": false,
+      "chop_beats_real_hourly_rate": false,
+      "chop_beats_real_net_hourly_rate": false
+    },
+    "doordash_model_vs_real": {
+      "pay_per_mile_diff": -2.158,
+      "pay_per_order_diff": -8.8786,
+      "hourly_rate_diff": -28.25,
+      "net_hourly_rate_diff": -25.0303,
+      "cost_per_mile_diff": -0.2459
+    }
+  }
+}

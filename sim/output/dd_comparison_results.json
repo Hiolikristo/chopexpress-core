@@ -1,0 +1,40 @@
+{
+    "real_world": {
+        "runs_loaded": 0,
+        "total_miles": 0,
+        "total_earnings": 0,
+        "total_orders": 0,
+        "total_hours": 0,
+        "total_cost": 0,
+        "total_net_profit": 0,
+        "pay_per_mile": 0.0,
+        "pay_per_order": 0.0,
+        "hourly_rate": 0.0,
+        "net_hourly_rate": 0.0,
+        "cost_per_mile": 0.0
+    },
+    "chopexpress_simulation": {
+        "total_orders": 120,
+        "approved_orders": 118,
+        "rejected_orders": 2,
+        "approval_rate": 0.9833,
+        "total_offer_pay": 2182.89,
+        "total_economic_miles": 911.46,
+        "avg_ppem": 2.39,
+        "avg_net_profit": 14.65,
+        "avg_hourly_rate": 42.61,
+        "pay_per_order": 18.19
+    },
+    "difference": {
+        "pay_per_mile_diff": 2.39,
+        "hourly_rate_diff": 42.61,
+        "pay_per_order_diff": 18.19,
+        "chop_avg_net_profit_minus_real_net_hourly": 14.65
+    },
+    "paths": {
+        "real_data_path": "sim\\input\\real_driving_log.csv",
+        "simulation_summary_path": "sim\\output\\latest_console_summary.json",
+        "output_json_path": "sim\\output\\dd_comparison_results.json",
+        "output_csv_path": "sim\\output\\dd_comparison_results.csv"
+    }
+}

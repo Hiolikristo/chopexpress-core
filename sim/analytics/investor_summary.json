@@ -1,0 +1,13 @@
+{
+  "recommended_launch_order": [
+    "Polaris",
+    "Westerville",
+    "Easton",
+    "Clintonville",
+    "Gahanna",
+    "Downtown"
+  ],
+  "best_zone": "Polaris",
+  "weakest_zone": "Downtown",
+  "summary": "Best initial launch zone is Polaris based on launch_score 160.93, completion_rate 0.9492, and avg_pay_per_mile 3.93."
+}
