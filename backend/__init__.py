@@ -1,1 +1,2 @@
- # ChopExpress backend package
+# backend/__init__.py
+# ChopExpress backend package

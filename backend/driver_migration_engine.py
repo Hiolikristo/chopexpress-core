@@ -1,35 +1,79 @@
-def apply_driver_migration(drivers, pressure_map):
+import random
+from typing import Dict, List
 
-    hot_zones = []
 
-    for zone, data in pressure_map.items():
+class Driver:
+    def __init__(self, driver_id: int):
+        self.driver_id = driver_id
+        self.platform = "competitor"
+        self.daily_income = 0
+        self.satisfaction = 0.5
 
-        if data.get("is_hot_zone", False):
-            hot_zones.append(zone)
 
-    if not hot_zones:
-        return drivers
+def calculate_satisfaction(income: float, hours: float) -> float:
+    hourly = income / max(hours, 1)
 
-    updated_drivers = []
+    if hourly >= 25:
+        return 0.9
+    elif hourly >= 20:
+        return 0.75
+    elif hourly >= 15:
+        return 0.55
+    else:
+        return 0.35
+
+
+def migration_probability(satisfaction: float) -> float:
+    """
+    Probability driver leaves competitor and joins ChopExpress
+    """
+
+    if satisfaction < 0.4:
+        return 0.6
+    elif satisfaction < 0.6:
+        return 0.35
+    else:
+        return 0.1
+
+
+def run_driver_migration(drivers: List[Driver]) -> Dict:
+    migrated = 0
 
     for driver in drivers:
 
-        driver_copy = dict(driver)
+        income = random.uniform(80, 180)
+        hours = random.uniform(4, 8)
 
-        zone = driver_copy.get("zone")
-        busy = driver_copy.get("is_busy", False)
-        flexible = driver_copy.get("is_flexible", True)
+        satisfaction = calculate_satisfaction(income, hours)
 
-        if not busy and flexible and zone not in hot_zones:
+        driver.daily_income = income
+        driver.satisfaction = satisfaction
 
-            driver_copy["previous_zone"] = zone
-            driver_copy["zone"] = hot_zones[0]
-            driver_copy["migrated"] = True
+        prob = migration_probability(satisfaction)
 
-        else:
+        if random.random() < prob:
+            driver.platform = "chopexpress"
+            migrated += 1
 
-            driver_copy["migrated"] = False
+    return {
+        "total_drivers": len(drivers),
+        "migrated": migrated,
+        "migration_rate": migrated / len(drivers)
+    }
 
-        updated_drivers.append(driver_copy)
 
-    return updated_drivers
+def generate_driver_pool(n: int = 200):
+    return [Driver(i) for i in range(n)]
+
+
+if __name__ == "__main__":
+
+    drivers = generate_driver_pool(300)
+
+    result = run_driver_migration(drivers)
+
+    print("Driver Migration Simulation")
+    print("---------------------------")
+    print(f"Drivers simulated: {result['total_drivers']}")
+    print(f"Migrated to ChopExpress: {result['migrated']}")
+    print(f"Migration rate: {result['migration_rate']:.2f}")

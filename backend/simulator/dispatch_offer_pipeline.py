@@ -17,11 +17,11 @@ if PROJECT_ROOT not in sys.path:
 
 
 # Import engines directly from project root
-from order_value_breakdown_engine import (
+from backend.order_value_breakdown_engine import (
     OrderValueBreakdownEngine,
     OrderValueBreakdownInput,
 )
-from fair_offer_engine import (
+from backend.fair_offer_engine import (
     FairOfferEngine,
     FairOfferInput,
 )

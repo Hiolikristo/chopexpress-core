@@ -1,45 +1,42 @@
-from dataclasses import dataclass
+from typing import List, Dict
 
 
-@dataclass
-class DriverEarningsResult:
-    gross_pay: float
-    fuel_cost: float
-    maintenance_cost: float
-    net_pay: float
-    pay_per_mile: float
-    net_per_mile: float
-    hourly_gross: float
-    hourly_net: float
+def calculate_hourly_income(orders: List[Dict], hours: float) -> float:
+    """
+    Calculate total driver earnings per hour from simulated orders.
+    """
+
+    total_pay = 0
+
+    for order in orders:
+        dispatch = order.get("dispatch", {})
+        pay = dispatch.get("pay_per_economic_mile", 0)
+        miles = dispatch.get("economic_miles", 0)
+
+        total_pay += pay * miles
+
+    if hours == 0:
+        return 0
+
+    return total_pay / hours
 
 
-def calculate_driver_earnings(
-    gross_pay: float,
-    total_miles: float,
-    active_minutes: float,
-    fuel_price_per_gallon: float = 3.45,
-    vehicle_mpg: float = 24.0,
-    maintenance_cost_per_mile: float = 0.14,
-) -> DriverEarningsResult:
-    safe_miles = max(0.01, total_miles)
-    safe_hours = max(1.0 / 60.0, active_minutes / 60.0)
+def driver_shift_summary(orders: List[Dict], hours: float) -> Dict:
 
-    fuel_cost = (safe_miles / max(1.0, vehicle_mpg)) * fuel_price_per_gallon
-    maintenance_cost = safe_miles * maintenance_cost_per_mile
-    net_pay = gross_pay - fuel_cost - maintenance_cost
+    hourly_income = calculate_hourly_income(orders, hours)
 
-    pay_per_mile = gross_pay / safe_miles
-    net_per_mile = net_pay / safe_miles
-    hourly_gross = gross_pay / safe_hours
-    hourly_net = net_pay / safe_hours
+    if hourly_income >= 25:
+        satisfaction = 0.9
+    elif hourly_income >= 20:
+        satisfaction = 0.75
+    elif hourly_income >= 15:
+        satisfaction = 0.55
+    else:
+        satisfaction = 0.35
 
-    return DriverEarningsResult(
-        gross_pay=round(gross_pay, 2),
-        fuel_cost=round(fuel_cost, 2),
-        maintenance_cost=round(maintenance_cost, 2),
-        net_pay=round(net_pay, 2),
-        pay_per_mile=round(pay_per_mile, 2),
-        net_per_mile=round(net_per_mile, 2),
-        hourly_gross=round(hourly_gross, 2),
-        hourly_net=round(hourly_net, 2),
-    )
+    return {
+        "orders_completed": len(orders),
+        "hours_worked": hours,
+        "hourly_income": round(hourly_income, 2),
+        "satisfaction": satisfaction
+    }
