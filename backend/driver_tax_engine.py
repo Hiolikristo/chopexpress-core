@@ -1,43 +1,34 @@
 from typing import Any, Dict
 
-IRS_MILEAGE_RATE = 0.67
-SELF_EMPLOYMENT_TAX_RATE = 0.153
-ESTIMATED_FEDERAL_TAX_RATE = 0.12
-
-
-def _to_float(value: Any, default: float = 0.0) -> float:
-    try:
-        if value is None:
-            return default
-        return float(value)
-    except (TypeError, ValueError):
-        return default
-
 
 def evaluate(payload: Dict[str, Any]) -> Dict[str, Any]:
-    offered_payout = _to_float(payload.get("offered_payout"))
-    tip = _to_float(payload.get("tip"))
+    """
+    Driver tax engine.
 
-    delivery_distance = _to_float(payload.get("delivery_distance"))
-    pickup_distance = _to_float(payload.get("pickup_distance"))
-    return_distance = _to_float(payload.get("return_distance"))
+    Produces a simple estimated tax view for driver earnings.
+    This is a planning/ledger helper, not formal tax advice.
+    """
 
-    gross_driver_income = offered_payout + tip
-    economic_miles = delivery_distance + pickup_distance + return_distance
+    driver_id = payload.get("driver_id", "unknown")
+    gross_pay = float(payload.get("gross_pay", 0.0) or 0.0)
+    driver_tax_rate = float(payload.get("driver_tax_rate", 0.15) or 0.15)
 
-    mileage_deduction_value = economic_miles * IRS_MILEAGE_RATE
-    taxable_income_estimate = max(gross_driver_income - mileage_deduction_value, 0.0)
-
-    federal_tax_estimate = taxable_income_estimate * ESTIMATED_FEDERAL_TAX_RATE
-    self_employment_tax_estimate = taxable_income_estimate * SELF_EMPLOYMENT_TAX_RATE
-    estimated_total_tax = federal_tax_estimate + self_employment_tax_estimate
+    estimated_tax = round(gross_pay * driver_tax_rate, 2)
+    net_after_tax = round(gross_pay - estimated_tax, 2)
 
     return {
-        "gross_driver_income": round(gross_driver_income, 2),
-        "economic_miles": round(economic_miles, 2),
-        "mileage_deduction_value": round(mileage_deduction_value, 2),
-        "taxable_income_estimate": round(taxable_income_estimate, 2),
-        "federal_tax_estimate": round(federal_tax_estimate, 2),
-        "self_employment_tax_estimate": round(self_employment_tax_estimate, 2),
-        "estimated_tax_reserve": round(estimated_total_tax, 2),
+        "driver_id": driver_id,
+        "gross_pay": gross_pay,
+        "driver_tax_rate": driver_tax_rate,
+        "estimated_tax": estimated_tax,
+        "net_after_tax": net_after_tax,
+        "status": "ok",
     }
+
+
+def driver_tax(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return evaluate(payload)
+
+
+def driver_tax_engine(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return evaluate(payload)

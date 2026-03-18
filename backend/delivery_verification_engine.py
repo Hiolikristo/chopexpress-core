@@ -1,6 +1,4 @@
-# backend/delivery_verification_engine.py
-
-from typing import Dict, Any
+from typing import Any, Dict
 
 
 def evaluate(payload: Dict[str, Any]) -> Dict[str, Any]:
@@ -12,28 +10,22 @@ def evaluate(payload: Dict[str, Any]) -> Dict[str, Any]:
     """
 
     merchant = payload.get("merchant", "unknown")
-    merchant_risk = payload.get("merchant_risk_score", 0.0)
-    is_batched = payload.get("is_batched_order", False)
+    merchant_risk = float(payload.get("merchant_risk_score", 0.0) or 0.0)
+    is_batched = bool(payload.get("is_batched_order", False))
 
     verification_status = "approved"
 
     if merchant_risk > 0.7:
         verification_status = "manual_review"
 
-    if is_batched:
-        batch_flag = True
-    else:
-        batch_flag = False
-
     return {
         "merchant": merchant,
         "verification_status": verification_status,
         "merchant_risk_score": merchant_risk,
-        "batch_order": batch_flag
+        "batch_order": is_batched,
+        "status": "ok",
     }
 
-
-# optional aliases so the pipeline contract validator is always satisfied
 
 def delivery_verification(payload: Dict[str, Any]) -> Dict[str, Any]:
     return evaluate(payload)

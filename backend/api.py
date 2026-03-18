@@ -1,65 +1,139 @@
+from __future__ import annotations
+
 from typing import Any, Dict
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from backend.order_pipeline import EngineContractError, evaluate_order_pipeline
+from backend.market_simulation_engine import market_simulation_engine
+from backend.driver_compliance_engine import driver_compliance_engine
 
-app = FastAPI(title="ChopExpress Core API")
+
+app = FastAPI(
+    title="ChopExpress Core API",
+    version="0.3.0",
+    description="Core evaluation, simulation, and compliance API for ChopExpress V1.",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class OrderRequest(BaseModel):
-    order_id: str = Field(..., description="Unique order identifier")
-    merchant: str = Field(..., description="Merchant name")
-    zone: str = Field(..., description="Delivery zone")
-    tier: str = Field(..., description="Driver tier")
+    order_id: str = "TEST1001"
+    merchant: str = "Test Kitchen"
+    zone: str = "clintonville"
+    tier: str = "professional"
 
-    delivery_distance: float = Field(..., description="Delivery miles")
-    pickup_distance: float = Field(..., description="Pickup miles")
-    return_distance: float = Field(..., description="Estimated return miles")
-    order_value: float = Field(..., description="Customer basket total")
-    offered_payout: float = Field(..., description="Driver offered payout")
-    tip: float = Field(0.0, description="Tip amount")
+    delivery_distance: float = 3.4
+    pickup_distance: float = 2.1
+    return_distance: float = 2.5
 
-    estimated_total_minutes: float = Field(24.0, description="Estimated trip time")
-    merchant_risk_score: float = Field(0.3, description="Merchant friction score")
-    zone_pressure_score: float = Field(1.0, description="Zone demand pressure")
-    is_batched_order: bool = Field(False, description="Whether order is batched")
+    order_value: float = 26.25
+    offered_payout: float = 8.75
+    tip: float = 4.0
+    estimated_total_minutes: float = 24.0
 
-    sales_tax_rate: float = Field(0.075, description="Merchant sales tax rate")
-    commission_rate: float = Field(0.18, description="Platform commission rate")
-    processing_rate: float = Field(0.03, description="Card processing percentage")
-    fixed_processing_fee: float = Field(0.30, description="Fixed payment fee")
-    promo_support: float = Field(0.0, description="Platform promo contribution")
-    merchant_id: str = Field("M-001", description="Merchant ID")
+    merchant_risk_score: float = 0.35
+    zone_pressure_score: float = 1.2
+    is_batched_order: bool = False
 
-    customer_month_orders: int = Field(0, description="Customer monthly order count")
-    customer_points: int = Field(0, description="Customer loyalty points")
+    sales_tax_rate: float = 0.075
+    commission_rate: float = 0.18
+    processing_rate: float = 0.03
+    fixed_processing_fee: float = 0.30
+    promo_support: float = 0.0
+
+    merchant_id: str = "M-001"
+    customer_month_orders: int = 14
+    customer_points: int = 220
+
+
+class MarketSimulationRequest(BaseModel):
+    order_count: int = Field(default=100, ge=1, le=5000)
+    zone: str = "clintonville"
+    include_peak: bool = True
+
+
+class DriverComplianceRequest(BaseModel):
+    driver_id: str = "DRV-1001"
+    background_check_passed: bool = True
+    license_valid: bool = True
+    insurance_valid: bool = True
+    vehicle_inspection_passed: bool = True
+    training_completed: bool = True
+    recertification_current: bool = True
 
 
 @app.get("/")
 def root() -> Dict[str, str]:
-    return {"message": "ChopExpress Core API running"}
+    return {"message": "ChopExpress Core API is running."}
 
 
 @app.get("/health")
 def health() -> Dict[str, str]:
-    return {"status": "ok"}
+    return {"status": "healthy", "service": "ChopExpress Core API"}
 
 
 @app.post("/evaluate-order")
-def evaluate_order(order: OrderRequest) -> Dict[str, Any]:
-    payload = order.model_dump()
-
+def evaluate_order(req: OrderRequest) -> Dict[str, Any]:
     try:
-        return evaluate_order_pipeline(payload)
+        result = evaluate_order_pipeline(req.model_dump())
+        return {"success": True, "data": result}
     except EngineContractError as exc:
         return {
+            "success": False,
             "status": "engine_contract_error",
             "message": str(exc),
         }
     except Exception as exc:
         return {
+            "success": False,
+            "status": "error",
+            "message": str(exc),
+        }
+
+
+@app.post("/simulate-market")
+def simulate_market(req: MarketSimulationRequest) -> Dict[str, Any]:
+    try:
+        result = market_simulation_engine(
+            {
+                "order_count": req.order_count,
+                "zone": req.zone,
+                "include_peak": req.include_peak,
+            }
+        )
+        return {"success": True, "data": result}
+    except Exception as exc:
+        return {
+            "success": False,
+            "status": "error",
+            "message": str(exc),
+        }
+
+
+@app.post("/evaluate-driver-compliance")
+def evaluate_driver_compliance(req: DriverComplianceRequest) -> Dict[str, Any]:
+    try:
+        result = driver_compliance_engine(req.model_dump())
+        return {"success": True, "data": result}
+    except EngineContractError as exc:
+        return {
+            "success": False,
+            "status": "engine_contract_error",
+            "message": str(exc),
+        }
+    except Exception as exc:
+        return {
+            "success": False,
             "status": "error",
             "message": str(exc),
         }

@@ -1,47 +1,68 @@
-from typing import Dict, Any
-
-
-ZONE_PRESSURE_MULTIPLIERS = {
-    "low": 0.9,
-    "normal": 1.0,
-    "busy": 1.1,
-    "surge": 1.25
-}
-
-
-def _to_float(v, default=0.0):
-    try:
-        return float(v)
-    except:
-        return default
+from typing import Any, Dict
 
 
 def evaluate(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Driver MS engine.
 
-    zone_pressure_score = _to_float(payload.get("zone_pressure_score", 1.0))
-    merchant_risk_score = _to_float(payload.get("merchant_risk_score", 0.3))
+    MS = migration / matching / suitability layer for now.
+    Keeps a stable pipeline contract while the richer driver-state logic
+    is still being built out.
+    """
 
-    base_multiplier = 1.0
+    driver_id = payload.get("driver_id", "unknown")
+    zone = payload.get("zone", "default")
+    driver_tier = payload.get("driver_tier", "casual")
+    acceptance_rate = float(payload.get("acceptance_rate", 0.0) or 0.0)
+    completion_rate = float(payload.get("completion_rate", 1.0) or 1.0)
+    rolling_miles_30d = float(payload.get("rolling_miles_30d", 0.0) or 0.0)
+    is_batched_order = bool(payload.get("is_batched_order", False))
 
-    if zone_pressure_score < 0.9:
-        zone_state = "low"
-    elif zone_pressure_score < 1.1:
-        zone_state = "normal"
-    elif zone_pressure_score < 1.3:
-        zone_state = "busy"
-    else:
-        zone_state = "surge"
+    suitability_score = 1.0
 
-    pressure_multiplier = ZONE_PRESSURE_MULTIPLIERS.get(zone_state, 1.0)
+    if acceptance_rate < 0.50:
+        suitability_score -= 0.15
 
-    merchant_delay_risk = merchant_risk_score * 0.15
+    if completion_rate < 0.90:
+        suitability_score -= 0.20
 
-    final_driver_market_multiplier = base_multiplier * pressure_multiplier + merchant_delay_risk
+    if is_batched_order:
+        suitability_score -= 0.05
+
+    if driver_tier in {"pro", "pro_plus", "elite", "professional"}:
+        suitability_score += 0.10
+
+    if rolling_miles_30d >= 1000:
+        suitability_score += 0.05
+
+    suitability_score = round(max(0.0, min(1.0, suitability_score)), 2)
+
+    migration_risk = "low"
+    if suitability_score < 0.50:
+        migration_risk = "high"
+    elif suitability_score < 0.75:
+        migration_risk = "medium"
 
     return {
-        "zone_state": zone_state,
-        "zone_pressure_score": round(zone_pressure_score, 2),
-        "pressure_multiplier": round(pressure_multiplier, 3),
-        "merchant_delay_risk": round(merchant_delay_risk, 3),
-        "driver_market_multiplier": round(final_driver_market_multiplier, 3)
+        "driver_id": driver_id,
+        "zone": zone,
+        "driver_tier": driver_tier,
+        "acceptance_rate": acceptance_rate,
+        "completion_rate": completion_rate,
+        "rolling_miles_30d": rolling_miles_30d,
+        "suitability_score": suitability_score,
+        "migration_risk": migration_risk,
+        "status": "ok",
     }
+
+
+def driver_ms(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return evaluate(payload)
+
+
+def evaluate_driver_ms(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return evaluate(payload)
+
+
+def driver_ms_engine(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return evaluate(payload)

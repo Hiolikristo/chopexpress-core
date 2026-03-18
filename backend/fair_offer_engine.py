@@ -1,54 +1,81 @@
-from typing import Dict, Any
-
-BASE_RATE_PER_MILE = 1.25
-BASE_RATE_PER_MINUTE = 0.22
-RETURN_BUFFER_RATE = 0.45
-
-TIER_MULTIPLIERS = {
-    "casual": 1.0,
-    "professional": 1.08,
-    "pro+": 1.15,
-    "elite": 1.25
-}
-
-
-def _to_float(v, default=0.0):
-    try:
-        return float(v)
-    except:
-        return default
+from typing import Any, Dict
 
 
 def evaluate(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Fair offer engine.
 
-    delivery_distance = _to_float(payload.get("delivery_distance"))
-    pickup_distance = _to_float(payload.get("pickup_distance"))
-    return_distance = _to_float(payload.get("return_distance"))
+    Produces a stable compensation breakdown for the pipeline.
+    This is a V1 contract-safe implementation that can later be expanded
+    into the full fairness/economics engine without breaking imports.
+    """
 
-    minutes = _to_float(payload.get("estimated_total_minutes"))
-    tip = _to_float(payload.get("tip"))
+    base_pay = float(payload.get("base_pay", 0.0) or 0.0)
+    tip = float(payload.get("tip", 0.0) or 0.0)
+    bonus = float(payload.get("bonus", 0.0) or 0.0)
 
-    tier = payload.get("tier", "casual").lower()
+    estimated_miles = float(payload.get("estimated_miles", 0.0) or 0.0)
+    return_miles = float(payload.get("return_miles", 0.0) or 0.0)
+    estimated_minutes = float(payload.get("estimated_minutes", 0.0) or 0.0)
 
-    tier_multiplier = TIER_MULTIPLIERS.get(tier, 1.0)
+    tier = str(payload.get("driver_tier", "casual") or "casual").lower()
+    is_batched_order = bool(payload.get("is_batched_order", False))
 
-    economic_miles = delivery_distance + pickup_distance + return_distance
+    tier_multiplier_map = {
+        "casual": 1.00,
+        "professional": 1.03,
+        "pro": 1.03,
+        "pro_plus": 1.06,
+        "elite": 1.10,
+    }
+    tier_multiplier = tier_multiplier_map.get(tier, 1.00)
 
-    mileage_component = economic_miles * BASE_RATE_PER_MILE
-    time_component = minutes * BASE_RATE_PER_MINUTE
-    return_buffer = return_distance * RETURN_BUFFER_RATE
+    economic_miles = max(0.0, estimated_miles + return_miles)
 
-    fair_base = mileage_component + time_component + return_buffer
+    gross_offer = base_pay + tip + bonus
+    adjusted_offer = round(gross_offer * tier_multiplier, 2)
 
-    fair_total = fair_base * tier_multiplier
+    effective_pay_per_mile = round(
+        adjusted_offer / economic_miles, 2
+    ) if economic_miles > 0 else adjusted_offer
 
-    fair_total += tip
+    effective_pay_per_minute = round(
+        adjusted_offer / estimated_minutes, 4
+    ) if estimated_minutes > 0 else adjusted_offer
+
+    fairness_status = "fair"
+    if effective_pay_per_mile < 1.00:
+        fairness_status = "unfair"
+    elif effective_pay_per_mile < 1.35:
+        fairness_status = "borderline"
 
     return {
+        "base_pay": round(base_pay, 2),
+        "tip": round(tip, 2),
+        "bonus": round(bonus, 2),
+        "gross_offer": round(gross_offer, 2),
+        "adjusted_offer": adjusted_offer,
+        "estimated_miles": round(estimated_miles, 2),
+        "return_miles": round(return_miles, 2),
         "economic_miles": round(economic_miles, 2),
-        "mileage_component": round(mileage_component, 2),
-        "time_component": round(time_component, 2),
-        "return_buffer": round(return_buffer, 2),
+        "estimated_minutes": round(estimated_minutes, 2),
+        "tier": tier,
         "tier_multiplier": tier_multiplier,
-        "fair_driver_total": round(fair_total, 2)
+        "is_batched_order": is_batched_order,
+        "effective_pay_per_mile": effective_pay_per_mile,
+        "effective_pay_per_minute": effective_pay_per_minute,
+        "fairness_status": fairness_status,
+        "status": "ok",
     }
+
+
+def fair_offer(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return evaluate(payload)
+
+
+def evaluate_fair_offer(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return evaluate(payload)
+
+
+def fair_offer_engine(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return evaluate(payload)

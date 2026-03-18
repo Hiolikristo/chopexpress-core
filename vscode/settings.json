@@ -1,6 +1,7 @@
 {
-"python.analysis.extraPaths": [
-"./src",
-"./backend"
-]
+  "python.defaultInterpreterPath": "E:\\ChopExpress\\.venv\\Scripts\\python.exe",
+  "python.analysis.extraPaths": [
+    "E:\\ChopExpress"
+  ],
+  "python.analysis.autoImportCompletions": true
 }
