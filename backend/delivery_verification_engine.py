@@ -1,35 +1,78 @@
-from typing import Any, Dict
+from __future__ import annotations
+
+from typing import Any, Dict, List, Optional
 
 
-def evaluate(payload: Dict[str, Any]) -> Dict[str, Any]:
+class DeliveryVerificationEngine:
     """
-    Delivery verification engine.
+    Canonical backend verification helper.
 
-    Validates that the order can be safely handed to the driver and
-    confirms that the merchant/customer conditions are acceptable.
+    This module should stay lightweight and deterministic.
+    It evaluates whether an order requires extra proof burden
+    and returns a normalized verification payload.
     """
 
-    merchant = payload.get("merchant", "unknown")
-    merchant_risk = float(payload.get("merchant_risk_score", 0.0) or 0.0)
-    is_batched = bool(payload.get("is_batched_order", False))
+    @staticmethod
+    def evaluate(payload: Dict[str, Any]) -> Dict[str, Any]:
+        merchant_category = str(payload.get("merchant_category", "unknown")).lower()
+        proof_required = bool(payload.get("proof_required", False))
+        receipt_photo_required = bool(payload.get("receipt_photo_required", False))
+        dropoff_photo_required = bool(payload.get("dropoff_photo_required", False))
+        drink_risk = bool(payload.get("drink_risk", False))
+        merchant_delay_flag = bool(payload.get("merchant_delay_flag", False))
+        app_error_flag = bool(payload.get("app_error_flag", False))
 
-    verification_status = "approved"
+        reasons: List[str] = []
 
-    if merchant_risk > 0.7:
-        verification_status = "manual_review"
+        if proof_required:
+            reasons.append("proof_required")
 
-    return {
-        "merchant": merchant,
-        "verification_status": verification_status,
-        "merchant_risk_score": merchant_risk,
-        "batch_order": is_batched,
-        "status": "ok",
-    }
+        if receipt_photo_required:
+            reasons.append("receipt_photo_required")
 
+        if dropoff_photo_required:
+            reasons.append("dropoff_photo_required")
 
-def delivery_verification(payload: Dict[str, Any]) -> Dict[str, Any]:
-    return evaluate(payload)
+        if drink_risk:
+            reasons.append("drink_risk")
+
+        if merchant_delay_flag:
+            reasons.append("merchant_delay_flag")
+
+        if app_error_flag:
+            reasons.append("app_error_flag")
+
+        if merchant_category in {"grocery", "pharmacy", "retail"}:
+            reasons.append("high_item_variability")
+
+        risk_score = 0.0
+        risk_score += 0.20 if proof_required else 0.0
+        risk_score += 0.10 if receipt_photo_required else 0.0
+        risk_score += 0.10 if dropoff_photo_required else 0.0
+        risk_score += 0.15 if drink_risk else 0.0
+        risk_score += 0.15 if merchant_delay_flag else 0.0
+        risk_score += 0.20 if app_error_flag else 0.0
+        risk_score += 0.10 if merchant_category in {"grocery", "pharmacy", "retail"} else 0.0
+        risk_score = min(risk_score, 1.0)
+
+        burden_minutes = 0.0
+        burden_minutes += 2.0 if proof_required else 0.0
+        burden_minutes += 1.5 if receipt_photo_required else 0.0
+        burden_minutes += 1.5 if dropoff_photo_required else 0.0
+        burden_minutes += 1.0 if drink_risk else 0.0
+        burden_minutes += 3.0 if merchant_delay_flag else 0.0
+        burden_minutes += 2.0 if app_error_flag else 0.0
+
+        return {
+            "verification_required": len(reasons) > 0,
+            "risk_score": round(risk_score, 4),
+            "burden_minutes": round(burden_minutes, 2),
+            "reasons": reasons,
+        }
 
 
 def delivery_verification_engine(payload: Dict[str, Any]) -> Dict[str, Any]:
-    return evaluate(payload)
+    """
+    Compatibility function used by existing backend callers.
+    """
+    return DeliveryVerificationEngine.evaluate(payload)

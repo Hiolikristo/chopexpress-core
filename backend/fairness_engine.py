@@ -1,54 +1,81 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from typing import Any, Dict, List
 
-
-@dataclass
-class FairnessDecision:
-    approved: bool
-    reason: str
-    offer_pay: float
-    trip_miles: float
-    return_miles: float
-    economic_miles: float
-    pay_per_economic_mile: float
-    minimum_required_ppem: float
-    return_buffer_used: float
+from backend.schemas import OrderObservation
 
 
 class FairnessEngine:
-    def __init__(self, min_ppem: float = 1.15) -> None:
-        self.min_ppem = float(min_ppem)
+    """
+    System-level fairness evaluation.
+    This is not the offer scorer itself; it evaluates burden and fairness signals.
+    """
 
-    def evaluate(
+    def __init__(
         self,
-        offer_pay: float,
-        trip_miles: float,
-        return_miles: float = 0.0,
-        min_ppem: float | None = None,
-    ) -> FairnessDecision:
-        offer_pay = float(offer_pay)
-        trip_miles = max(0.0, float(trip_miles))
-        return_miles = max(0.0, float(return_miles))
-        threshold = self.min_ppem if min_ppem is None else float(min_ppem)
+        min_pay_per_economic_mile: float = 1.15,
+        min_effective_hourly: float = 18.0,
+        max_burden_minutes: float = 18.0,
+    ) -> None:
+        self.min_pay_per_economic_mile = min_pay_per_economic_mile
+        self.min_effective_hourly = min_effective_hourly
+        self.max_burden_minutes = max_burden_minutes
 
-        economic_miles = round(trip_miles + return_miles, 2)
-        if economic_miles <= 0:
-            ppem = 0.0
-        else:
-            ppem = round(offer_pay / economic_miles, 2)
+    def evaluate(self, observation: OrderObservation) -> Dict[str, Any]:
+        reasons: List[str] = []
 
-        approved = ppem >= threshold
-        reason = "approved" if approved else "below_fairness_threshold"
-
-        return FairnessDecision(
-            approved=approved,
-            reason=reason,
-            offer_pay=round(offer_pay, 2),
-            trip_miles=round(trip_miles, 2),
-            return_miles=round(return_miles, 2),
-            economic_miles=economic_miles,
-            pay_per_economic_mile=ppem,
-            minimum_required_ppem=round(threshold, 2),
-            return_buffer_used=round(return_miles, 2),
+        economic_miles = float(observation.economic_miles or 0.0)
+        total_pay = float(observation.offered_pay_total or 0.0)
+        burden_minutes = (
+            float(observation.merchant_wait_minutes or 0.0)
+            + float(observation.idle_before_offer_minutes or 0.0)
+            + float(observation.delivery_minutes or 0.0)
         )
+
+        pay_per_economic_mile = 0.0
+        if economic_miles > 0:
+            pay_per_economic_mile = total_pay / economic_miles
+
+        effective_hourly = 0.0
+        if burden_minutes > 0:
+            effective_hourly = total_pay / (burden_minutes / 60.0)
+
+        score = 1.0
+
+        if economic_miles <= 0:
+            reasons.append("missing_economic_miles")
+            score -= 0.20
+
+        if pay_per_economic_mile < self.min_pay_per_economic_mile:
+            reasons.append("below_min_pay_per_economic_mile")
+            score -= 0.30
+
+        if burden_minutes > self.max_burden_minutes:
+            reasons.append("high_burden_minutes")
+            score -= 0.20
+
+        if effective_hourly < self.min_effective_hourly and burden_minutes > 0:
+            reasons.append("below_min_effective_hourly")
+            score -= 0.20
+
+        if observation.acceptance_rate_pressure_flag:
+            reasons.append("acceptance_rate_pressure_seen")
+            score -= 0.05
+
+        if observation.navigate_back_to_zone_flag:
+            reasons.append("requires_back_to_zone_navigation")
+            score -= 0.05
+
+        if observation.merchant_delay_flag:
+            reasons.append("merchant_delay_flag")
+            score -= 0.05
+
+        score = max(0.0, round(score, 4))
+
+        return {
+            "score": score,
+            "reasons": reasons,
+            "pay_per_economic_mile": round(pay_per_economic_mile, 4),
+            "effective_hourly": round(effective_hourly, 4),
+            "burden_minutes": round(burden_minutes, 2),
+        }

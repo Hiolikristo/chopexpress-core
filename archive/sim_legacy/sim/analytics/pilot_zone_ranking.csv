@@ -1,0 +1,7 @@
+zone,orders,completed_orders,unclaimed_orders,completion_rate,total_earnings,total_miles,avg_pay_per_order,avg_pay_per_mile,avg_effective_ppm,avg_effective_hourly,avg_pressure_score,avg_surge_multiplier,launch_score
+Polaris,177,168,9,0.9492,4370.08,1113.06,26.01,3.93,3.33,63.85,3.1811,1.38,160.93
+Westerville,164,158,6,0.9634,3598.77,984.69,22.78,3.65,2.99,57.98,1.8694,1.25,155.69
+Easton,157,148,9,0.9427,3299.57,902.84,22.29,3.65,3.05,56.35,1.793,1.25,149.38
+Clintonville,153,148,5,0.9673,2559.34,743.13,17.29,3.44,2.75,52.41,1.3518,1.09,148.74
+Gahanna,172,161,11,0.936,2996.81,912.14,18.61,3.29,2.75,51.03,1.2794,1.11,133.69
+Downtown,177,151,26,0.8531,3751.01,974.03,24.84,3.85,3.55,67.84,2.4824,1.38,132.1

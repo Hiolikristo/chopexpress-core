@@ -1,123 +1,101 @@
-from typing import Any, Callable, Dict
+from __future__ import annotations
 
-from .customer_loyalty_engine import customer_loyalty_engine
-from .delivery_verification_engine import delivery_verification_engine
-from .dispatch_engine import dispatch_engine
-from .driver_ms_engine import driver_ms_engine
-from .driver_tax_engine import driver_tax_engine
-from .fair_offer_engine import fair_offer_engine
-from .insurance_support_engine import insurance_support_engine
-from .merchant_finance_engine import merchant_finance_engine
-from .merchant_tax_engine import merchant_tax_engine
-from .settlement_engine import settlement_engine
+from datetime import datetime
+from typing import Any, Dict, Optional
 
-
-class EngineContractError(Exception):
-    pass
+from backend.delivery_verification_engine import delivery_verification_engine
+from backend.schemas import (
+    DriverAcceptOfferRequest,
+    LifecycleStatus,
+    OrderObservation,
+    OrderResponse,
+    OrderStatusUpdateRequest,
+)
 
 
-def _validate_result(module_name: str, result: Any, fn_name: str) -> Dict[str, Any]:
-    if not isinstance(result, dict):
-        raise EngineContractError(
-            f"{module_name} returned non-dict result from '{fn_name}'"
-        )
-    return result
+def _safe_float(value: Any, default: float = 0.0) -> float:
+    try:
+        if value is None:
+            return default
+        return float(value)
+    except (TypeError, ValueError):
+        return default
 
 
-def _run_callable(
-    module_name: str,
-    payload: Dict[str, Any],
-    fn: Callable[[Dict[str, Any]], Dict[str, Any]],
-    fn_name: str,
-) -> Dict[str, Any]:
-    if not callable(fn):
-        raise EngineContractError(
-            f"{module_name} must expose callable '{fn_name}'"
-        )
-    result = fn(payload)
-    return _validate_result(module_name, result, fn_name)
+def compute_economic_miles(observation: OrderObservation) -> float:
+    actual_trip_miles = _safe_float(observation.actual_trip_miles)
+    return_miles_estimate = _safe_float(observation.return_miles_estimate)
+    zone_exit_miles = _safe_float(observation.zone_exit_miles)
+    return round(actual_trip_miles + return_miles_estimate + zone_exit_miles, 4)
 
 
-def evaluate_order_pipeline(payload: Dict[str, Any]) -> Dict[str, Any]:
-    breakdown = _run_callable(
-        "fair_offer_engine",
-        payload,
-        fair_offer_engine,
-        "fair_offer_engine",
-    )
-
-    dispatch = _run_callable(
-        "dispatch_engine",
-        payload,
-        dispatch_engine,
-        "dispatch_engine",
-    )
-
-    driver_ms = _run_callable(
-        "driver_ms_engine",
-        payload,
-        driver_ms_engine,
-        "driver_ms_engine",
-    )
-
-    insurance = _run_callable(
-        "insurance_support_engine",
-        payload,
-        insurance_support_engine,
-        "insurance_support_engine",
-    )
-
-    verification = _run_callable(
-        "delivery_verification_engine",
-        payload,
-        delivery_verification_engine,
-        "delivery_verification_engine",
-    )
-
-    merchant_finance = _run_callable(
-        "merchant_finance_engine",
-        payload,
-        merchant_finance_engine,
-        "merchant_finance_engine",
-    )
-
-    merchant_tax = _run_callable(
-        "merchant_tax_engine",
-        payload,
-        merchant_tax_engine,
-        "merchant_tax_engine",
-    )
-
-    settlement = _run_callable(
-        "settlement_engine",
-        payload,
-        settlement_engine,
-        "settlement_engine",
-    )
-
-    driver_tax = _run_callable(
-        "driver_tax_engine",
-        payload,
-        driver_tax_engine,
-        "driver_tax_engine",
-    )
-
-    customer_loyalty = _run_callable(
-        "customer_loyalty_engine",
-        payload,
-        customer_loyalty_engine,
-        "customer_loyalty_engine",
-    )
-
+def build_verification_payload(observation: OrderObservation) -> Dict[str, Any]:
     return {
-        "breakdown": breakdown,
-        "dispatch": dispatch,
-        "driver_ms": driver_ms,
-        "insurance": insurance,
-        "verification": verification,
-        "merchant_finance": merchant_finance,
-        "merchant_tax": merchant_tax,
-        "settlement": settlement,
-        "driver_tax": driver_tax,
-        "customer_loyalty": customer_loyalty,
+        "merchant_category": observation.merchant_category,
+        "proof_required": observation.proof_required,
+        "receipt_photo_required": observation.receipt_photo_required,
+        "dropoff_photo_required": observation.dropoff_photo_required,
+        "drink_risk": observation.drink_risk,
+        "merchant_delay_flag": observation.merchant_delay_flag,
+        "app_error_flag": observation.app_error_flag,
     }
+
+
+def normalize_observation(observation: OrderObservation) -> OrderObservation:
+    if observation.economic_miles and observation.economic_miles > 0:
+        return observation
+    return observation.model_copy(
+        update={"economic_miles": compute_economic_miles(observation)}
+    )
+
+
+def evaluate_observation(observation: OrderObservation) -> Dict[str, Any]:
+    normalized = normalize_observation(observation)
+    verification = delivery_verification_engine(
+        build_verification_payload(normalized)
+    )
+    return {
+        "observation": normalized,
+        "verification": verification,
+        "economic_miles": normalized.economic_miles,
+    }
+
+
+def create_order_response(
+    order_id: str,
+    status: LifecycleStatus = "accepted",
+    created_at: Optional[datetime] = None,
+    updated_at: Optional[datetime] = None,
+) -> OrderResponse:
+    now = datetime.utcnow()
+    return OrderResponse(
+        order_id=order_id,
+        status=status,
+        created_at=created_at or now,
+        updated_at=updated_at or now,
+    )
+
+
+def accept_driver_offer(
+    request: DriverAcceptOfferRequest,
+    current_status: LifecycleStatus = "accepted",
+) -> Dict[str, Any]:
+    return {
+        "driver_id": request.driver_id,
+        "observation_id": request.observation_id,
+        "status": current_status,
+        "accepted_at": datetime.utcnow().isoformat(),
+    }
+
+
+def apply_status_update(
+    order_id: str,
+    created_at: datetime,
+    request: OrderStatusUpdateRequest,
+) -> OrderResponse:
+    return OrderResponse(
+        order_id=order_id,
+        status=request.status,
+        created_at=created_at,
+        updated_at=datetime.utcnow(),
+    )

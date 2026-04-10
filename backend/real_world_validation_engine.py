@@ -1,168 +1,151 @@
 from __future__ import annotations
 
-import csv
 import json
-import os
+from pathlib import Path
 from typing import Any, Dict, List
 
-
-INPUT_REAL_RUNS = os.path.join("sim", "input", "evidence", "real_driving_log.csv")
-OUTPUT_GAS_REPORT = os.path.join("sim", "output", "gas_intelligence_report.json")
-
-
-def _to_float(value: Any, default: float = 0.0) -> float:
-    if value is None:
-        return default
-    if isinstance(value, (int, float)):
-        return float(value)
-    text = str(value).strip()
-    if text == "":
-        return default
-    try:
-        return float(text)
-    except (TypeError, ValueError):
-        return default
+from backend.fair_offer_engine import classify_offer
+from backend.sample_observations import load_sample_observations
 
 
-def _safe_div(numerator: float, denominator: float) -> float:
-    if denominator == 0:
-        return 0.0
-    return numerator / denominator
+OUTPUT_DIR = Path("sim/output")
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def _ensure_parent_dir(path: str) -> None:
-    parent = os.path.dirname(path)
-    if parent:
-        os.makedirs(parent, exist_ok=True)
+def actual_driver_action(observation: Any) -> str:
+    if bool(getattr(observation, "accepted", False)):
+        return "accepted"
+    if bool(getattr(observation, "declined", False)):
+        return "declined"
+    return "unknown"
 
 
-def load_real_runs(path: str = INPUT_REAL_RUNS) -> List[Dict[str, Any]]:
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Missing real driving log: {path}")
+def validate_single(scored: Dict[str, Any], observation: Any) -> Dict[str, Any]:
+    actual_action = actual_driver_action(observation)
+    recommended_action = scored.get("action", "unknown")
 
-    rows: List[Dict[str, Any]] = []
+    hindsight_label = "unknown"
+    validation_score = 50.0
+    notes: List[str] = []
 
-    with open(path, "r", encoding="utf-8-sig", newline="") as f:
-        reader = csv.DictReader(f)
-        fieldnames = reader.fieldnames or []
+    if actual_action == "accepted":
+        if recommended_action == "accept":
+            hindsight_label = "good_accept"
+            validation_score = 100.0
+            notes.append("Driver accepted and engine also recommended accept.")
+        elif recommended_action == "borderline":
+            hindsight_label = "borderline_accept"
+            validation_score = 70.0
+            notes.append("Driver accepted a borderline offer.")
+        else:
+            hindsight_label = "bad_accept"
+            validation_score = 30.0
+            notes.append("Driver accepted an offer engine marked decline.")
 
-        required = ["date", "platform", "zone", "miles", "hours", "fuel_cost", "other_cost"]
-        missing = [col for col in required if col not in fieldnames]
-        if missing:
-            raise ValueError(f"real_driving_log.csv missing columns: {missing}")
+    elif actual_action == "declined":
+        if recommended_action == "decline":
+            hindsight_label = "good_decline"
+            validation_score = 100.0
+            notes.append("Driver declined and engine also recommended decline.")
+        elif recommended_action == "borderline":
+            hindsight_label = "borderline_decline"
+            validation_score = 70.0
+            notes.append("Driver declined a borderline offer.")
+        else:
+            hindsight_label = "missed_good_offer"
+            validation_score = 40.0
+            notes.append("Driver may have passed on a viable offer.")
 
-        for raw in reader:
-            if not raw:
-                continue
+    else:
+        notes.append("Actual driver action unknown.")
 
-            rows.append(
-                {
-                    "date": str(raw.get("date", "")).strip(),
-                    "platform": str(raw.get("platform", "")).strip(),
-                    "zone": str(raw.get("zone", "")).strip(),
-                    "miles": _to_float(raw.get("miles")),
-                    "hours": _to_float(raw.get("hours")),
-                    "fuel_cost": _to_float(raw.get("fuel_cost")),
-                    "other_cost": _to_float(raw.get("other_cost")),
-                }
-            )
+    if bool(getattr(observation, "merchant_delay_flag", False)):
+        notes.append("Merchant delay contributed to realized outcome.")
 
-    if not rows:
-        raise ValueError("No real driving rows found")
+    if bool(getattr(observation, "navigate_back_to_zone_flag", False)):
+        notes.append("Forced zone reposition burden detected.")
 
-    return rows
-
-
-def build_gas_report(real_runs: List[Dict[str, Any]]) -> Dict[str, Any]:
-    total_runs = len(real_runs)
-    total_miles = sum(_to_float(r["miles"]) for r in real_runs)
-    total_hours = sum(_to_float(r["hours"]) for r in real_runs)
-    total_fuel_cost = sum(_to_float(r["fuel_cost"]) for r in real_runs)
-    total_other_cost = sum(_to_float(r["other_cost"]) for r in real_runs)
-
-    avg_fuel_cost_per_run = _safe_div(total_fuel_cost, total_runs)
-    fuel_cost_per_mile = _safe_div(total_fuel_cost, total_miles)
-    fuel_cost_per_hour = _safe_div(total_fuel_cost, total_hours)
-
-    zone_breakdown: Dict[str, Dict[str, float]] = {}
-
-    for row in real_runs:
-        zone = row["zone"] or "unknown"
-        if zone not in zone_breakdown:
-            zone_breakdown[zone] = {
-                "runs": 0,
-                "miles": 0.0,
-                "hours": 0.0,
-                "fuel_cost": 0.0,
-                "other_cost": 0.0,
-            }
-
-        zone_breakdown[zone]["runs"] += 1
-        zone_breakdown[zone]["miles"] += _to_float(row["miles"])
-        zone_breakdown[zone]["hours"] += _to_float(row["hours"])
-        zone_breakdown[zone]["fuel_cost"] += _to_float(row["fuel_cost"])
-        zone_breakdown[zone]["other_cost"] += _to_float(row["other_cost"])
-
-    normalized_zone_breakdown: Dict[str, Dict[str, float]] = {}
-    for zone, values in zone_breakdown.items():
-        miles = values["miles"]
-        hours = values["hours"]
-        fuel_cost = values["fuel_cost"]
-
-        normalized_zone_breakdown[zone] = {
-            "runs": values["runs"],
-            "miles": round(miles, 2),
-            "hours": round(hours, 2),
-            "fuel_cost": round(fuel_cost, 2),
-            "other_cost": round(values["other_cost"], 2),
-            "fuel_cost_per_mile": round(_safe_div(fuel_cost, miles), 4),
-            "fuel_cost_per_hour": round(_safe_div(fuel_cost, hours), 4),
-        }
-
-    cheapest_zone = None
-    cheapest_value = None
-    most_expensive_zone = None
-    most_expensive_value = None
-
-    for zone, values in normalized_zone_breakdown.items():
-        cost_per_mile = values["fuel_cost_per_mile"]
-        if cheapest_value is None or cost_per_mile < cheapest_value:
-            cheapest_zone = zone
-            cheapest_value = cost_per_mile
-        if most_expensive_value is None or cost_per_mile > most_expensive_value:
-            most_expensive_zone = zone
-            most_expensive_value = cost_per_mile
+    if bool(getattr(observation, "app_error_flag", False)):
+        notes.append("App error friction detected.")
 
     return {
-        "runs_loaded": total_runs,
-        "total_miles": round(total_miles, 2),
-        "total_hours": round(total_hours, 2),
-        "total_fuel_cost": round(total_fuel_cost, 2),
-        "total_other_cost": round(total_other_cost, 2),
-        "avg_fuel_cost_per_run": round(avg_fuel_cost_per_run, 4),
-        "fuel_cost_per_mile": round(fuel_cost_per_mile, 4),
-        "fuel_cost_per_hour": round(fuel_cost_per_hour, 4),
-        "cheapest_zone_by_fuel_per_mile": cheapest_zone,
-        "most_expensive_zone_by_fuel_per_mile": most_expensive_zone,
-        "zone_breakdown": normalized_zone_breakdown,
+        "observation_id": getattr(observation, "observation_id", "unknown"),
+        "session_id": getattr(observation, "session_id", "unknown"),
+        "merchant_name": getattr(observation, "merchant_name", "unknown"),
+        "zone": getattr(observation, "zone", "unknown"),
+        "recommended_action": recommended_action,
+        "actual_driver_action": actual_action,
+        "hindsight_label": hindsight_label,
+        "validation_score": round(validation_score, 2),
+        "offered_pay_total": round(float(getattr(observation, "offered_pay_total", 0.0) or 0.0), 2),
+        "offered_miles": round(float(getattr(observation, "offered_miles", 0.0) or 0.0), 2),
+        "economic_miles": round(float(scored.get("economic_miles", 0.0) or 0.0), 2),
+        "burden_minutes": round(float(scored.get("burden_minutes", 0.0) or 0.0), 2),
+        "modeled_total_minutes": round(float(scored.get("modeled_total_minutes", 0.0) or 0.0), 2),
+        "effective_hourly": round(float(scored.get("effective_hourly", 0.0) or 0.0), 2),
+        "minimum_driver_pay": round(float(scored.get("minimum_driver_pay", 0.0) or 0.0), 2),
+        "pay_gap": round(float(scored.get("pay_gap", 0.0) or 0.0), 2),
+        "score": round(float(scored.get("score", 0.0) or 0.0), 2),
+        "reasons": scored.get("reasons", []),
+        "notes": notes,
     }
 
 
-def save_report(report: Dict[str, Any], path: str = OUTPUT_GAS_REPORT) -> None:
-    _ensure_parent_dir(path)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2)
+def summarize_validations(validations: List[Dict[str, Any]]) -> Dict[str, Any]:
+    total = len(validations)
+    if total == 0:
+        return {
+            "total_observations": 0,
+            "avg_validation_score": 0.0,
+            "good_accept_count": 0,
+            "good_decline_count": 0,
+            "bad_accept_count": 0,
+            "missed_good_offer_count": 0,
+            "borderline_accept_count": 0,
+            "borderline_decline_count": 0,
+        }
+
+    def count(label: str) -> int:
+        return sum(1 for item in validations if item.get("hindsight_label") == label)
+
+    avg_score = sum(float(item.get("validation_score", 0.0)) for item in validations) / total
+
+    return {
+        "total_observations": total,
+        "avg_validation_score": round(avg_score, 2),
+        "good_accept_count": count("good_accept"),
+        "good_decline_count": count("good_decline"),
+        "bad_accept_count": count("bad_accept"),
+        "missed_good_offer_count": count("missed_good_offer"),
+        "borderline_accept_count": count("borderline_accept"),
+        "borderline_decline_count": count("borderline_decline"),
+    }
 
 
-def main() -> Dict[str, Any]:
-    print("Running gas intelligence analysis...")
+def write_validation_report(payload: Dict[str, Any]) -> str:
+    report_path = OUTPUT_DIR / "real_world_validation_report.json"
+    report_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return str(report_path)
 
-    real_runs = load_real_runs(INPUT_REAL_RUNS)
-    report = build_gas_report(real_runs)
-    save_report(report, OUTPUT_GAS_REPORT)
 
-    print(f"Gas intelligence report written: {OUTPUT_GAS_REPORT}")
-    return report
+def main() -> None:
+    observations = load_sample_observations()
+    validations: List[Dict[str, Any]] = []
+
+    for obs in observations:
+        scored = classify_offer(obs)
+        validation = validate_single(scored, obs)
+        validations.append(validation)
+
+    payload = {
+        "summary": summarize_validations(validations),
+        "results": validations,
+    }
+
+    print(json.dumps(payload, indent=2))
+
+    report_path = write_validation_report(payload)
+    print(f"\nValidation report written to: {report_path}")
 
 
 if __name__ == "__main__":

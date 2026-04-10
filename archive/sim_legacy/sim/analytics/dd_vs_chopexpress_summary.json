@@ -1,0 +1,20 @@
+{
+  "real_world": {
+    "orders": 12,
+    "earnings": 122.55,
+    "miles": 46.5,
+    "pay_per_mile": 2.64
+  },
+  "chopexpress_simulation": {
+    "orders": 934,
+    "earnings": 20575.58,
+    "miles": 5272.77,
+    "pay_per_mile": 3.9
+  },
+  "difference": {
+    "earnings_diff": 20453.03,
+    "pay_per_mile_diff": 1.26,
+    "orders_diff": 922,
+    "miles_diff": 5226.27
+  }
+}

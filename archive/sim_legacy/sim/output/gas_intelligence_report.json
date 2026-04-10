@@ -1,0 +1,32 @@
+{
+  "runs_loaded": 4,
+  "total_miles": 86.4,
+  "total_hours": 6.6,
+  "total_fuel_cost": 19.5,
+  "total_other_cost": 1.75,
+  "avg_fuel_cost_per_run": 4.875,
+  "fuel_cost_per_mile": 0.2257,
+  "fuel_cost_per_hour": 2.9545,
+  "cheapest_zone_by_fuel_per_mile": "Clintonville",
+  "most_expensive_zone_by_fuel_per_mile": "Easton",
+  "zone_breakdown": {
+    "Easton": {
+      "runs": 2,
+      "miles": 42.3,
+      "hours": 3.2,
+      "fuel_cost": 9.6,
+      "other_cost": 0.9,
+      "fuel_cost_per_mile": 0.227,
+      "fuel_cost_per_hour": 3.0
+    },
+    "Clintonville": {
+      "runs": 2,
+      "miles": 44.1,
+      "hours": 3.4,
+      "fuel_cost": 9.9,
+      "other_cost": 0.85,
+      "fuel_cost_per_mile": 0.2245,
+      "fuel_cost_per_hour": 2.9118
+    }
+  }
+}

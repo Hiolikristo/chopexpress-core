@@ -1,0 +1,1001 @@
+id,pickup,dropoff,miles,offer,status
+cbdd712b,Taco Bell Karl Rd,Easton Area,4.63,10.6,available
+979fea63,Popeyes Easton,Short North,3.01,7.77,available
+fc793e9f,Popeyes Easton,Easton Area,6.05,13.09,available
+0dcaac23,Chipotle High St,Worthington,7.28,15.24,available
+73a30a75,Taco Bell Karl Rd,Easton Area,7.36,15.38,available
+d01a64dc,Taco Bell Karl Rd,Clintonville,5.04,11.32,available
+a3452ff1,Popeyes Easton,Easton Area,5.78,12.62,available
+6b717526,Wendy's Cleveland Ave,Downtown Columbus,4.0,9.5,available
+74aa27a5,Taco Bell Karl Rd,Worthington,2.5,6.88,available
+4cef4fef,Chipotle High St,Clintonville,6.0,13.0,available
+d9eb6485,Wendy's Cleveland Ave,Worthington,7.05,14.84,available
+152156df,Chipotle High St,Downtown Columbus,1.78,5.62,available
+387c075a,Taco Bell Karl Rd,Short North,5.63,12.35,available
+37ed74ba,Chipotle High St,Worthington,2.04,6.07,available
+57be4795,Chipotle High St,OSU Campus,4.76,10.83,available
+5623d653,Popeyes Easton,OSU Campus,2.1,6.18,available
+97562cda,Wendy's Cleveland Ave,Short North,7.38,15.41,available
+42ecb1c9,Chipotle High St,Downtown Columbus,6.23,13.4,available
+ef6c0679,Chipotle High St,Downtown Columbus,4.98,11.21,available
+467de04d,KFC Morse Rd,Clintonville,6.0,13.0,available
+3a11892e,Chipotle High St,OSU Campus,6.83,14.45,available
+21e9b512,Chipotle High St,Worthington,6.71,14.24,available
+f0cabe74,McDonald's Hudson,Short North,1.27,4.72,available
+ab583957,Chipotle High St,Worthington,2.34,6.59,available
+4ff3751d,KFC Morse Rd,Worthington,1.78,5.62,available
+c2235337,Popeyes Easton,Clintonville,1.52,5.16,available
+4dc03d90,Popeyes Easton,Clintonville,5.0,11.25,available
+6641bc32,Popeyes Easton,Short North,4.52,10.41,available
+c3a61cb1,KFC Morse Rd,OSU Campus,2.4,6.7,available
+ee08df57,Wendy's Cleveland Ave,Easton Area,6.84,14.47,available
+96cadafe,Taco Bell Karl Rd,Clintonville,4.19,9.83,available
+746689a7,Wendy's Cleveland Ave,OSU Campus,6.49,13.86,available
+67e9c420,Wendy's Cleveland Ave,Short North,5.63,12.35,available
+d60604e8,KFC Morse Rd,Short North,2.54,6.95,available
+86c78edf,Wendy's Cleveland Ave,Downtown Columbus,4.89,11.06,available
+e3bcd136,Popeyes Easton,Clintonville,3.55,8.71,available
+890cc9e4,Taco Bell Karl Rd,OSU Campus,6.26,13.46,available
+51436e15,Wendy's Cleveland Ave,Worthington,5.16,11.53,available
+401e3d15,KFC Morse Rd,Clintonville,2.61,7.07,available
+bfd4a3a1,Popeyes Easton,Worthington,1.37,4.9,available
+b2552b7e,McDonald's Hudson,Clintonville,3.47,8.57,available
+e2d45af9,Popeyes Easton,Worthington,1.34,4.85,available
+9eb480ac,Popeyes Easton,OSU Campus,5.6,12.3,available
+4cb0e78d,Chipotle High St,OSU Campus,2.67,7.17,available
+07dcfdc8,KFC Morse Rd,Short North,4.42,10.23,available
+5371671d,Wendy's Cleveland Ave,Easton Area,4.38,10.16,available
+addfb26f,Popeyes Easton,Clintonville,2.38,6.67,available
+0442f86f,Chipotle High St,Downtown Columbus,4.68,10.69,available
+4f0687c1,Wendy's Cleveland Ave,Easton Area,4.22,9.88,available
+8b582684,Wendy's Cleveland Ave,OSU Campus,2.32,6.56,available
+b8149896,Taco Bell Karl Rd,Easton Area,3.57,8.75,available
+d8527071,KFC Morse Rd,Clintonville,2.45,6.79,available
+dd7ef5fc,KFC Morse Rd,OSU Campus,4.39,10.18,available
+54fd4f20,Chipotle High St,Clintonville,3.4,8.45,available
+1c5f4629,Wendy's Cleveland Ave,Short North,7.02,14.79,available
+df534ec4,Wendy's Cleveland Ave,Short North,6.6,14.05,available
+d091fc4e,Taco Bell Karl Rd,Easton Area,5.41,11.97,available
+cfcf8f16,KFC Morse Rd,Downtown Columbus,4.84,10.97,available
+f79072aa,Chipotle High St,Short North,7.19,15.08,available
+56955da7,Taco Bell Karl Rd,Downtown Columbus,5.34,11.84,available
+f6a397b7,Taco Bell Karl Rd,Easton Area,4.91,11.09,available
+b131328a,McDonald's Hudson,Worthington,3.44,8.52,available
+455b3211,KFC Morse Rd,Clintonville,1.78,5.62,available
+6614ed95,Chipotle High St,Downtown Columbus,7.38,15.41,available
+aed73688,Popeyes Easton,Short North,4.0,9.5,available
+b0acd8e0,Wendy's Cleveland Ave,Short North,5.38,11.91,available
+a2e9a796,Chipotle High St,Worthington,5.11,11.44,available
+eb7789ce,McDonald's Hudson,OSU Campus,6.06,13.1,available
+3a6d95dc,Chipotle High St,Short North,3.99,9.48,available
+29c99f17,Chipotle High St,Worthington,1.53,5.18,available
+8d6d8f8d,Popeyes Easton,OSU Campus,3.19,8.08,available
+b4629e22,KFC Morse Rd,Easton Area,5.77,12.6,available
+4b5d7ea0,KFC Morse Rd,Short North,3.87,9.27,available
+e9171a47,Popeyes Easton,Clintonville,1.37,4.9,available
+54cde2cf,Popeyes Easton,Downtown Columbus,2.51,6.89,available
+26512517,Chipotle High St,OSU Campus,3.79,9.13,available
+2bd5cbd4,KFC Morse Rd,Short North,3.82,9.18,available
+bcba4f30,Chipotle High St,Easton Area,5.71,12.49,available
+1dbf2ab5,Popeyes Easton,OSU Campus,4.71,10.74,available
+b6cbdb39,KFC Morse Rd,Clintonville,3.76,9.08,available
+27a1d273,McDonald's Hudson,Clintonville,6.41,13.72,available
+941faee7,Taco Bell Karl Rd,OSU Campus,6.28,13.49,available
+90dd9de7,Wendy's Cleveland Ave,OSU Campus,4.18,9.81,available
+e4167d8f,McDonald's Hudson,Clintonville,4.56,10.48,available
+4d4d8a63,Wendy's Cleveland Ave,Easton Area,7.23,15.15,available
+4b2cfa63,McDonald's Hudson,Worthington,5.43,12.0,available
+4f11236c,KFC Morse Rd,OSU Campus,3.0,7.75,available
+2cc4bb9f,Wendy's Cleveland Ave,Downtown Columbus,6.42,13.73,available
+fd7c0980,Chipotle High St,Downtown Columbus,4.54,10.45,available
+1da638c1,Wendy's Cleveland Ave,Clintonville,3.46,8.55,available
+fb7ca41f,Chipotle High St,Short North,1.53,5.18,available
+030a2bae,Wendy's Cleveland Ave,OSU Campus,2.93,7.63,available
+a99d3e16,Taco Bell Karl Rd,Worthington,3.88,9.29,available
+123be2da,Chipotle High St,Clintonville,6.77,14.35,available
+6552adb0,Taco Bell Karl Rd,Worthington,3.49,8.61,available
+1e5362bb,Wendy's Cleveland Ave,Clintonville,2.99,7.73,available
+20b681ba,KFC Morse Rd,OSU Campus,6.76,14.33,available
+6851ffd0,Popeyes Easton,Worthington,2.08,6.14,available
+12e55f17,KFC Morse Rd,Downtown Columbus,5.31,11.79,available
+f1e7f0d2,Chipotle High St,OSU Campus,4.55,10.46,available
+5c5493ae,Popeyes Easton,Short North,4.44,10.27,available
+eab9a94e,Chipotle High St,Short North,2.18,6.32,available
+de8a49b1,Popeyes Easton,Downtown Columbus,6.83,14.45,available
+13927b64,Chipotle High St,OSU Campus,6.72,14.26,available
+3d0d0dd2,Popeyes Easton,Downtown Columbus,2.03,6.05,available
+5dd1c4df,KFC Morse Rd,OSU Campus,3.35,8.36,available
+02292422,McDonald's Hudson,Clintonville,4.94,11.15,available
+78825644,Popeyes Easton,OSU Campus,5.98,12.96,available
+a15afd35,Taco Bell Karl Rd,Short North,2.19,6.33,available
+57de9c75,Wendy's Cleveland Ave,Downtown Columbus,6.12,13.21,available
+73b08a36,Popeyes Easton,Short North,6.81,14.42,available
+93f3ab3f,KFC Morse Rd,Easton Area,2.65,7.14,available
+ca620565,KFC Morse Rd,Downtown Columbus,4.43,10.25,available
+8fe2379f,Chipotle High St,Short North,1.56,5.23,available
+10454687,McDonald's Hudson,Short North,5.47,12.07,available
+683da618,Wendy's Cleveland Ave,Easton Area,5.97,12.95,available
+29ea573e,Wendy's Cleveland Ave,OSU Campus,7.05,14.84,available
+49ab5fa7,McDonald's Hudson,Short North,5.02,11.29,available
+bac6dd82,Popeyes Easton,Clintonville,5.24,11.67,available
+3455707a,Wendy's Cleveland Ave,Worthington,4.15,9.76,available
+e6bc006f,Chipotle High St,Worthington,1.37,4.9,available
+d912c9ba,McDonald's Hudson,Clintonville,4.11,9.69,available
+ac618da4,Taco Bell Karl Rd,Short North,1.98,5.96,available
+fa8cb54e,Wendy's Cleveland Ave,Downtown Columbus,2.27,6.47,available
+57f5d116,Popeyes Easton,Downtown Columbus,1.62,5.33,available
+85f6849e,KFC Morse Rd,Clintonville,2.7,7.23,available
+f607d2a7,Wendy's Cleveland Ave,Downtown Columbus,2.95,7.66,available
+9690e960,KFC Morse Rd,Easton Area,6.43,13.75,available
+4aecc109,McDonald's Hudson,Worthington,5.73,12.53,available
+b4e60cb5,Wendy's Cleveland Ave,Worthington,3.88,9.29,available
+b48372dd,Chipotle High St,OSU Campus,2.3,6.52,available
+2a4832ce,Wendy's Cleveland Ave,Easton Area,5.94,12.9,available
+0f2701ce,Popeyes Easton,Worthington,1.96,5.93,available
+6a805dc1,KFC Morse Rd,OSU Campus,6.36,13.63,available
+258268be,KFC Morse Rd,Clintonville,3.91,9.34,available
+656551c0,Wendy's Cleveland Ave,Easton Area,3.41,8.47,available
+ef4bd095,Chipotle High St,Worthington,4.44,10.27,available
+7e46b4e2,Chipotle High St,Worthington,6.01,13.02,available
+484700ef,Chipotle High St,OSU Campus,4.24,9.92,available
+ba99ac18,KFC Morse Rd,OSU Campus,2.36,6.63,available
+987e6da5,Chipotle High St,Downtown Columbus,2.01,6.02,available
+e7a3df41,KFC Morse Rd,Worthington,4.24,9.92,available
+b58a8a1f,Taco Bell Karl Rd,Easton Area,3.38,8.41,available
+3d830183,Popeyes Easton,OSU Campus,1.66,5.4,available
+090a20e9,McDonald's Hudson,OSU Campus,3.01,7.77,available
+2b8b2e8c,KFC Morse Rd,Downtown Columbus,5.47,12.07,available
+74e9539a,Taco Bell Karl Rd,Short North,6.84,14.47,available
+6b90c0b9,Popeyes Easton,Short North,5.67,12.42,available
+32abf751,Taco Bell Karl Rd,Downtown Columbus,4.09,9.66,available
+8365670b,Chipotle High St,Clintonville,7.06,14.85,available
+311023d3,Chipotle High St,Clintonville,4.73,10.78,available
+65169142,KFC Morse Rd,Worthington,4.9,11.08,available
+ccb8dd42,Popeyes Easton,Clintonville,6.09,13.16,available
+ed7c9050,McDonald's Hudson,Clintonville,1.85,5.74,available
+81fb24fa,McDonald's Hudson,Short North,6.54,13.95,available
+0cb29aad,Wendy's Cleveland Ave,Short North,2.38,6.67,available
+5398a115,Popeyes Easton,Short North,6.61,14.07,available
+224fa33d,Taco Bell Karl Rd,Clintonville,2.6,7.05,available
+adfea10f,Taco Bell Karl Rd,OSU Campus,6.42,13.73,available
+28e8e956,Taco Bell Karl Rd,Easton Area,4.24,9.92,available
+39f32e7e,Taco Bell Karl Rd,Clintonville,4.51,10.39,available
+8832a1b7,Wendy's Cleveland Ave,OSU Campus,3.24,8.17,available
+f7cd3617,Taco Bell Karl Rd,Short North,4.46,10.3,available
+2c10a013,Chipotle High St,Downtown Columbus,7.17,15.05,available
+d21c5b41,Popeyes Easton,Easton Area,1.67,5.42,available
+d66c62ab,KFC Morse Rd,Downtown Columbus,5.14,11.49,available
+9a57f1e0,Wendy's Cleveland Ave,Short North,1.29,4.76,available
+20a47450,Popeyes Easton,Clintonville,5.77,12.6,available
+65384107,McDonald's Hudson,OSU Campus,1.98,5.96,available
+be391910,Taco Bell Karl Rd,Worthington,2.05,6.09,available
+791792d5,McDonald's Hudson,Downtown Columbus,4.27,9.97,available
+46f9b67d,Wendy's Cleveland Ave,Downtown Columbus,5.19,11.58,available
+0d071159,Chipotle High St,Worthington,4.72,10.76,available
+f7e81b88,Taco Bell Karl Rd,Worthington,2.87,7.52,available
+031791f4,McDonald's Hudson,Worthington,7.06,14.85,available
+5f6c95a3,McDonald's Hudson,Easton Area,2.0,6.0,available
+cb06a39e,Chipotle High St,Downtown Columbus,7.48,15.59,available
+1bb5683a,Wendy's Cleveland Ave,Short North,2.76,7.33,available
+e1ea735f,McDonald's Hudson,Worthington,5.44,12.02,available
+0da8a45b,Taco Bell Karl Rd,Easton Area,3.05,7.84,available
+53c74325,McDonald's Hudson,OSU Campus,4.96,11.18,available
+8e20fb11,KFC Morse Rd,OSU Campus,2.96,7.68,available
+28c03c30,Popeyes Easton,Easton Area,5.6,12.3,available
+7448b481,Taco Bell Karl Rd,Worthington,5.94,12.9,available
+eb5c0378,Popeyes Easton,OSU Campus,4.37,10.15,available
+d0ff0a9e,KFC Morse Rd,Downtown Columbus,5.02,11.29,available
+0fe68a2e,KFC Morse Rd,Clintonville,4.73,10.78,available
+d2a731bd,Taco Bell Karl Rd,Easton Area,3.02,7.79,available
+a83b45d7,Popeyes Easton,OSU Campus,6.22,13.38,available
+0d609cda,KFC Morse Rd,OSU Campus,4.64,10.62,available
+f19ee433,KFC Morse Rd,Downtown Columbus,7.0,14.75,available
+ec4ac095,McDonald's Hudson,OSU Campus,4.96,11.18,available
+72aa819a,KFC Morse Rd,Downtown Columbus,2.97,7.7,available
+00e3aa74,Wendy's Cleveland Ave,OSU Campus,1.67,5.42,available
+f7d91839,Chipotle High St,Easton Area,2.16,6.28,available
+416c363f,Chipotle High St,Short North,1.98,5.96,available
+6029dc14,Taco Bell Karl Rd,Short North,3.14,8.0,available
+83274a26,Popeyes Easton,Easton Area,5.19,11.58,available
+ebb15fbe,Wendy's Cleveland Ave,Easton Area,3.19,8.08,available
+43ab538d,McDonald's Hudson,OSU Campus,2.36,6.63,available
+e6db7d91,Chipotle High St,OSU Campus,1.72,5.51,available
+c76b1f2a,Taco Bell Karl Rd,Easton Area,1.52,5.16,available
+4eeeb879,Wendy's Cleveland Ave,Downtown Columbus,1.22,4.63,available
+5080342f,Popeyes Easton,OSU Campus,7.05,14.84,available
+9216c5c4,Popeyes Easton,OSU Campus,4.95,11.16,available
+657e84da,Wendy's Cleveland Ave,Downtown Columbus,3.89,9.31,available
+a623237c,Wendy's Cleveland Ave,Short North,4.18,9.81,available
+bb93bf76,Chipotle High St,Downtown Columbus,7.15,15.01,available
+07c9d83e,Chipotle High St,Short North,5.34,11.84,available
+1fa9c63e,Popeyes Easton,Easton Area,4.08,9.64,available
+3b75d818,Wendy's Cleveland Ave,OSU Campus,5.88,12.79,available
+ca0b5d16,KFC Morse Rd,Easton Area,1.22,4.63,available
+823f4092,Wendy's Cleveland Ave,Easton Area,3.64,8.87,available
+3a795286,Taco Bell Karl Rd,Short North,7.41,15.47,available
+a7910694,McDonald's Hudson,Short North,6.4,13.7,available
+8f27d137,Taco Bell Karl Rd,Easton Area,7.04,14.82,available
+334cbf65,KFC Morse Rd,Easton Area,6.77,14.35,available
+1696c096,KFC Morse Rd,Downtown Columbus,1.82,5.69,available
+deb9bd21,Chipotle High St,OSU Campus,2.97,7.7,available
+3caaaf30,Wendy's Cleveland Ave,Downtown Columbus,5.72,12.51,available
+7796a842,Wendy's Cleveland Ave,OSU Campus,2.71,7.24,available
+e72a2aa9,Popeyes Easton,OSU Campus,3.98,9.46,available
+f0fa5be8,McDonald's Hudson,Easton Area,1.93,5.88,available
+edec6683,Chipotle High St,Downtown Columbus,6.76,14.33,available
+7f210705,Wendy's Cleveland Ave,Worthington,3.11,7.94,available
+2217cdaa,Taco Bell Karl Rd,Clintonville,3.24,8.17,available
+9368ad91,Popeyes Easton,Worthington,6.43,13.75,available
+de6b28b6,Taco Bell Karl Rd,Short North,4.34,10.09,available
+90a6c092,Popeyes Easton,Short North,7.25,15.19,available
+0dd4ee36,Taco Bell Karl Rd,Short North,4.89,11.06,available
+cda992c7,Chipotle High St,Clintonville,6.43,13.75,available
+06324ce6,Chipotle High St,Clintonville,6.25,13.44,available
+f7bafb1c,McDonald's Hudson,Worthington,4.42,10.23,available
+14ad8782,KFC Morse Rd,Worthington,5.91,12.84,available
+76f0a362,McDonald's Hudson,Clintonville,3.4,8.45,available
+971bf0be,KFC Morse Rd,Worthington,6.85,14.49,available
+e768b185,McDonald's Hudson,Downtown Columbus,4.11,9.69,available
+58f63260,Wendy's Cleveland Ave,Clintonville,6.6,14.05,available
+5a11cb79,Popeyes Easton,OSU Campus,4.79,10.88,available
+04816556,KFC Morse Rd,Short North,5.78,12.62,available
+1a69cc38,McDonald's Hudson,Downtown Columbus,7.44,15.52,available
+a8c1b2f9,Taco Bell Karl Rd,Clintonville,6.94,14.65,available
+217f909f,Wendy's Cleveland Ave,Worthington,1.84,5.72,available
+e59e7edc,Wendy's Cleveland Ave,OSU Campus,1.79,5.63,available
+dbcff3e5,McDonald's Hudson,Worthington,2.34,6.59,available
+7ad59065,Taco Bell Karl Rd,Short North,7.07,14.87,available
+5cb517b1,Wendy's Cleveland Ave,Downtown Columbus,3.66,8.91,available
+730b8991,Taco Bell Karl Rd,OSU Campus,1.62,5.33,available
+571beca4,McDonald's Hudson,Clintonville,7.07,14.87,available
+95b701b9,Taco Bell Karl Rd,Clintonville,1.92,5.86,available
+86a41163,Wendy's Cleveland Ave,Short North,3.09,7.91,available
+3853a532,Popeyes Easton,Easton Area,1.62,5.33,available
+39612216,Chipotle High St,OSU Campus,1.39,4.93,available
+4563356f,Chipotle High St,Downtown Columbus,2.17,6.3,available
+c4ca68da,McDonald's Hudson,Clintonville,1.22,4.63,available
+5de1d7ff,KFC Morse Rd,Downtown Columbus,6.5,13.88,available
+1c1151e3,Popeyes Easton,Clintonville,1.31,4.79,available
+41272e77,Chipotle High St,Downtown Columbus,2.36,6.63,available
+2c8db0c0,McDonald's Hudson,Short North,6.77,14.35,available
+aefaf374,KFC Morse Rd,Clintonville,5.79,12.63,available
+9547640b,Taco Bell Karl Rd,Worthington,6.05,13.09,available
+43f3fa11,Wendy's Cleveland Ave,Clintonville,3.02,7.79,available
+004a10f7,Chipotle High St,Short North,5.2,11.6,available
+2e6ee908,Chipotle High St,OSU Campus,6.78,14.37,available
+bb095aba,Taco Bell Karl Rd,OSU Campus,5.63,12.35,available
+4019351c,KFC Morse Rd,Clintonville,4.94,11.15,available
+b787433c,McDonald's Hudson,Easton Area,2.54,6.95,available
+39e1f432,Wendy's Cleveland Ave,Short North,6.6,14.05,available
+ec0d83fc,Popeyes Easton,Easton Area,6.66,14.16,available
+d74470bb,Chipotle High St,Downtown Columbus,2.61,7.07,available
+5af56086,Taco Bell Karl Rd,Easton Area,5.37,11.9,available
+0a0faed5,Popeyes Easton,Downtown Columbus,4.2,9.85,available
+3892c84d,McDonald's Hudson,Clintonville,2.88,7.54,available
+4abfcdc6,Popeyes Easton,Clintonville,6.05,13.09,available
+b63c9ac1,Popeyes Easton,Downtown Columbus,4.23,9.9,available
+7e34081f,McDonald's Hudson,Downtown Columbus,3.32,8.31,available
+fb4b2c46,Taco Bell Karl Rd,Clintonville,1.83,5.7,available
+f1cf16d3,Wendy's Cleveland Ave,Downtown Columbus,3.36,8.38,available
+37c712a4,Popeyes Easton,Clintonville,3.15,8.01,available
+88841c0f,KFC Morse Rd,OSU Campus,7.29,15.26,available
+5f12a810,KFC Morse Rd,Downtown Columbus,2.02,6.04,available
+4c8b3302,Taco Bell Karl Rd,Downtown Columbus,2.92,7.61,available
+79af9814,Chipotle High St,Easton Area,6.9,14.58,available
+f670b9d7,McDonald's Hudson,Worthington,1.37,4.9,available
+7ba270e4,Chipotle High St,OSU Campus,5.67,12.42,available
+4e86ade4,Taco Bell Karl Rd,Clintonville,1.37,4.9,available
+52a5d090,Wendy's Cleveland Ave,OSU Campus,5.27,11.72,available
+cfd8511a,KFC Morse Rd,Downtown Columbus,3.07,7.87,available
+cc3cc4ee,Taco Bell Karl Rd,Downtown Columbus,4.36,10.13,available
+0eda37e1,Taco Bell Karl Rd,Worthington,5.35,11.86,available
+cd13559e,Taco Bell Karl Rd,Short North,7.46,15.55,available
+cb1308e1,Taco Bell Karl Rd,Downtown Columbus,3.03,7.8,available
+0250c810,Wendy's Cleveland Ave,Short North,1.66,5.4,available
+b4d3d915,Chipotle High St,Short North,5.03,11.3,available
+c5a72c2b,Wendy's Cleveland Ave,Clintonville,4.7,10.72,available
+9e81ccff,Wendy's Cleveland Ave,Worthington,1.82,5.69,available
+3dc8c6a9,Wendy's Cleveland Ave,Easton Area,6.39,13.68,available
+034ab4a1,Taco Bell Karl Rd,Clintonville,7.07,14.87,available
+b0a98c3d,Chipotle High St,Easton Area,4.54,10.45,available
+12be42ac,Popeyes Easton,Clintonville,6.92,14.61,available
+14b58737,Taco Bell Karl Rd,Short North,4.37,10.15,available
+2e1498c9,KFC Morse Rd,Short North,3.21,8.12,available
+c1f7fdd2,Wendy's Cleveland Ave,Clintonville,3.39,8.43,available
+f9ee0d98,KFC Morse Rd,OSU Campus,1.8,5.65,available
+94956c24,McDonald's Hudson,OSU Campus,4.16,9.78,available
+6a76da58,Popeyes Easton,Short North,1.4,4.95,available
+21680091,McDonald's Hudson,Clintonville,6.94,14.65,available
+67c5b93f,Popeyes Easton,Short North,2.74,7.29,available
+23b46a8f,Taco Bell Karl Rd,Downtown Columbus,5.83,12.7,available
+9583bcd6,Chipotle High St,Downtown Columbus,5.07,11.37,available
+ac0d9066,Wendy's Cleveland Ave,Worthington,5.31,11.79,available
+c0e0b2b4,Taco Bell Karl Rd,Downtown Columbus,1.62,5.33,available
+d12ba6d7,McDonald's Hudson,Clintonville,3.71,8.99,available
+041a1e74,Chipotle High St,Easton Area,1.86,5.76,available
+7e8b4da0,Taco Bell Karl Rd,Downtown Columbus,5.91,12.84,available
+419651e8,Chipotle High St,OSU Campus,1.44,5.02,available
+1e345c94,Chipotle High St,Downtown Columbus,5.04,11.32,available
+e7eb3e81,Taco Bell Karl Rd,Downtown Columbus,5.35,11.86,available
+bf77a2fc,KFC Morse Rd,OSU Campus,4.81,10.92,available
+1083af5f,Wendy's Cleveland Ave,Easton Area,1.21,4.62,available
+6dde3af2,Taco Bell Karl Rd,Easton Area,6.39,13.68,available
+8e3ac8f6,KFC Morse Rd,Easton Area,1.26,4.71,available
+fe0f31dc,McDonald's Hudson,Downtown Columbus,6.18,13.31,available
+c3c1dfdd,Wendy's Cleveland Ave,Easton Area,4.55,10.46,available
+801ce3ec,Taco Bell Karl Rd,Downtown Columbus,3.18,8.07,available
+2cd5b269,Popeyes Easton,Clintonville,7.08,14.89,available
+e2ef108c,KFC Morse Rd,Downtown Columbus,3.71,8.99,available
+6b87abdf,Wendy's Cleveland Ave,Short North,7.03,14.8,available
+6a7f59fd,KFC Morse Rd,Downtown Columbus,7.45,15.54,available
+a295154c,Wendy's Cleveland Ave,Clintonville,4.85,10.99,available
+af4f815d,KFC Morse Rd,OSU Campus,3.3,8.27,available
+16e028c3,McDonald's Hudson,Worthington,3.09,7.91,available
+f04a6fe3,Wendy's Cleveland Ave,Short North,4.32,10.06,available
+ad1ef2ea,Popeyes Easton,Downtown Columbus,1.41,4.97,available
+5bc92cd4,Wendy's Cleveland Ave,Clintonville,5.39,11.93,available
+2c689343,Chipotle High St,Worthington,3.46,8.55,available
+5dc6c682,Chipotle High St,Downtown Columbus,1.81,5.67,available
+2d035609,McDonald's Hudson,Easton Area,7.17,15.05,available
+5ca03012,Taco Bell Karl Rd,OSU Campus,5.69,12.46,available
+b074face,Taco Bell Karl Rd,Easton Area,4.2,9.85,available
+09301a6b,McDonald's Hudson,Short North,3.99,9.48,available
+e899fd6f,KFC Morse Rd,Short North,6.17,13.3,available
+0d6036ea,McDonald's Hudson,Easton Area,6.96,14.68,available
+c663d5dd,Popeyes Easton,OSU Campus,1.5,5.12,available
+2d20a7ee,Chipotle High St,Clintonville,2.15,6.26,available
+1745858b,Popeyes Easton,Short North,5.56,12.23,available
+e381b70f,Wendy's Cleveland Ave,Worthington,1.44,5.02,available
+b17cc694,KFC Morse Rd,Short North,6.7,14.22,available
+da4e304d,Chipotle High St,Easton Area,3.96,9.43,available
+0aee4419,KFC Morse Rd,OSU Campus,5.95,12.91,available
+007927ae,Wendy's Cleveland Ave,Short North,7.18,15.06,available
+4f278b04,Wendy's Cleveland Ave,Downtown Columbus,6.07,13.12,available
+ad71c010,McDonald's Hudson,Clintonville,1.82,5.69,available
+ce3c180c,Chipotle High St,Easton Area,1.67,5.42,available
+94c5f529,KFC Morse Rd,OSU Campus,2.55,6.96,available
+0fe78354,Wendy's Cleveland Ave,Downtown Columbus,6.01,13.02,available
+7c24b1e0,KFC Morse Rd,OSU Campus,4.83,10.95,available
+99e30b36,Wendy's Cleveland Ave,Easton Area,5.66,12.41,available
+d5406eb6,KFC Morse Rd,Short North,6.71,14.24,available
+633dbf36,Popeyes Easton,Downtown Columbus,5.62,12.34,available
+dc2a67ba,Chipotle High St,Downtown Columbus,7.39,15.43,available
+e9445385,Chipotle High St,OSU Campus,6.83,14.45,available
+eabf04db,KFC Morse Rd,Worthington,1.68,5.44,available
+8a3e698f,Chipotle High St,Easton Area,3.91,9.34,available
+74fb5e06,Popeyes Easton,Worthington,3.59,8.78,available
+cf56e442,Taco Bell Karl Rd,Worthington,3.16,8.03,available
+f08b9725,Wendy's Cleveland Ave,Easton Area,2.82,7.43,available
+632b9ef1,Taco Bell Karl Rd,Clintonville,5.85,12.74,available
+55dfed3b,Chipotle High St,Clintonville,5.35,11.86,available
+554756cf,Wendy's Cleveland Ave,Easton Area,4.49,10.36,available
+a4f99d44,Chipotle High St,Downtown Columbus,3.56,8.73,available
+5b86ccd8,Taco Bell Karl Rd,Worthington,4.34,10.09,available
+5ac854c7,Chipotle High St,Worthington,7.27,15.22,available
+76c1090c,Popeyes Easton,OSU Campus,3.33,8.33,available
+24244450,Taco Bell Karl Rd,Worthington,2.49,6.86,available
+5713c04d,McDonald's Hudson,Worthington,6.35,13.61,available
+44982670,Popeyes Easton,Clintonville,1.22,4.63,available
+11902a41,Popeyes Easton,Downtown Columbus,7.39,15.43,available
+6bbdb8fb,Taco Bell Karl Rd,Downtown Columbus,4.0,9.5,available
+f8b2feae,KFC Morse Rd,Worthington,1.72,5.51,available
+420483e6,McDonald's Hudson,Downtown Columbus,4.33,10.08,available
+eb5c2ae8,McDonald's Hudson,Short North,7.17,15.05,available
+fe60321e,Taco Bell Karl Rd,OSU Campus,3.89,9.31,available
+9afa3a67,KFC Morse Rd,Short North,5.94,12.9,available
+3bfcab0c,Popeyes Easton,OSU Campus,2.37,6.65,available
+b4679156,Chipotle High St,Easton Area,2.47,6.82,available
+90ffc5c5,Taco Bell Karl Rd,Short North,5.32,11.81,available
+de8f3889,Wendy's Cleveland Ave,Clintonville,7.02,14.79,available
+91cdc249,Taco Bell Karl Rd,Short North,1.23,4.65,available
+a7f6f8a6,Chipotle High St,Short North,4.18,9.81,available
+443bb932,Chipotle High St,Downtown Columbus,2.42,6.73,available
+b67dcdc3,KFC Morse Rd,OSU Campus,2.41,6.72,available
+78a307a2,Popeyes Easton,Easton Area,5.14,11.49,available
+e768b645,Taco Bell Karl Rd,Clintonville,5.15,11.51,available
+1fc647d3,Popeyes Easton,Easton Area,6.09,13.16,available
+596bedac,Taco Bell Karl Rd,OSU Campus,1.67,5.42,available
+3fed37c9,Chipotle High St,Worthington,1.83,5.7,available
+3d674782,Popeyes Easton,Downtown Columbus,7.28,15.24,available
+0c85a456,Taco Bell Karl Rd,Short North,3.0,7.75,available
+f41e5747,Chipotle High St,Downtown Columbus,3.31,8.29,available
+080b985a,Chipotle High St,Downtown Columbus,5.08,11.39,available
+1423fb4f,Chipotle High St,Downtown Columbus,3.12,7.96,available
+e85edaf7,Popeyes Easton,Downtown Columbus,5.55,12.21,available
+0dc3d754,Taco Bell Karl Rd,OSU Campus,5.48,12.09,available
+049e08fd,McDonald's Hudson,Downtown Columbus,5.59,12.28,available
+c3cf2918,Taco Bell Karl Rd,Short North,3.92,9.36,available
+3b4f921a,Chipotle High St,Downtown Columbus,5.81,12.67,available
+0883f060,Taco Bell Karl Rd,OSU Campus,6.39,13.68,available
+af248c30,Taco Bell Karl Rd,Downtown Columbus,7.15,15.01,available
+f5041a86,Chipotle High St,Clintonville,1.71,5.49,available
+0df9b47e,Popeyes Easton,Short North,4.04,9.57,available
+af48a18d,Taco Bell Karl Rd,Easton Area,1.62,5.33,available
+75a92e71,KFC Morse Rd,OSU Campus,5.96,12.93,available
+2637ab47,KFC Morse Rd,Short North,2.68,7.19,available
+15d9b956,Wendy's Cleveland Ave,Easton Area,6.1,13.17,available
+bb66a61f,Popeyes Easton,Short North,6.2,13.35,available
+77291767,McDonald's Hudson,Worthington,2.28,6.49,available
+cb3fa8f1,Wendy's Cleveland Ave,Easton Area,3.25,8.19,available
+1cc7839d,KFC Morse Rd,Short North,3.84,9.22,available
+b86a3bc5,Wendy's Cleveland Ave,Short North,5.35,11.86,available
+72cc6b5a,Wendy's Cleveland Ave,OSU Campus,1.3,4.78,available
+54d40928,Wendy's Cleveland Ave,Short North,2.85,7.49,available
+1070085e,McDonald's Hudson,Worthington,1.7,5.47,available
+9e75fc23,Taco Bell Karl Rd,Short North,4.72,10.76,available
+7dfb3012,McDonald's Hudson,Short North,3.26,8.21,available
+00c6ebef,Chipotle High St,Clintonville,6.94,14.65,available
+ef65bb9a,McDonald's Hudson,Clintonville,4.23,9.9,available
+ba5562b2,Popeyes Easton,OSU Campus,3.12,7.96,available
+6df32e06,Taco Bell Karl Rd,Worthington,7.21,15.12,available
+a3263cac,Wendy's Cleveland Ave,Downtown Columbus,4.39,10.18,available
+d657b8d2,Wendy's Cleveland Ave,Easton Area,5.27,11.72,available
+502a364c,Taco Bell Karl Rd,Downtown Columbus,5.96,12.93,available
+e40ce336,KFC Morse Rd,Clintonville,2.43,6.75,available
+b313f70e,McDonald's Hudson,Clintonville,6.58,14.02,available
+8b20f0b4,Wendy's Cleveland Ave,Clintonville,7.35,15.36,available
+72e7cbc0,Wendy's Cleveland Ave,Worthington,3.26,8.21,available
+c1b2d53f,McDonald's Hudson,Clintonville,5.87,12.77,available
+3b3f3821,Chipotle High St,Downtown Columbus,3.54,8.7,available
+1fadd306,McDonald's Hudson,Easton Area,6.83,14.45,available
+d10a22f8,Chipotle High St,Short North,5.82,12.69,available
+d89e8178,Wendy's Cleveland Ave,Short North,6.94,14.65,available
+f5d07c84,McDonald's Hudson,Short North,6.18,13.31,available
+d9771d66,Taco Bell Karl Rd,Easton Area,3.16,8.03,available
+9fb27a46,Popeyes Easton,Short North,5.43,12.0,available
+19d5d75d,KFC Morse Rd,OSU Campus,5.31,11.79,available
+ff11b8de,KFC Morse Rd,Downtown Columbus,5.13,11.48,available
+18dde9bd,KFC Morse Rd,Short North,1.63,5.35,available
+3935ac05,Chipotle High St,Clintonville,6.13,13.23,available
+d2d2e385,Chipotle High St,Clintonville,1.95,5.91,available
+3e7a164d,Wendy's Cleveland Ave,Easton Area,4.47,10.32,available
+4ca72964,Popeyes Easton,Worthington,3.94,9.39,available
+eda4396d,Chipotle High St,Worthington,1.52,5.16,available
+442bb058,Taco Bell Karl Rd,OSU Campus,4.99,11.23,available
+5d26e54d,Wendy's Cleveland Ave,OSU Campus,3.53,8.68,available
+2bcedc7b,KFC Morse Rd,Easton Area,4.35,10.11,available
+c408e1a1,Popeyes Easton,Easton Area,4.85,10.99,available
+fcf163a3,Taco Bell Karl Rd,Downtown Columbus,6.51,13.89,available
+f0f40620,KFC Morse Rd,OSU Campus,6.97,14.7,available
+acd66e63,Popeyes Easton,Downtown Columbus,3.5,8.62,available
+642b8856,Taco Bell Karl Rd,Short North,1.36,4.88,available
+77313c09,McDonald's Hudson,Easton Area,6.68,14.19,available
+b658a7ba,KFC Morse Rd,OSU Campus,3.23,8.15,available
+850c1a7f,Popeyes Easton,Clintonville,6.7,14.22,available
+bba2b7ed,Chipotle High St,Clintonville,1.67,5.42,available
+1f323623,KFC Morse Rd,Worthington,3.87,9.27,available
+295bc25c,Taco Bell Karl Rd,Downtown Columbus,1.64,5.37,available
+34ec23a2,McDonald's Hudson,Downtown Columbus,1.36,4.88,available
+7e204649,Wendy's Cleveland Ave,Worthington,6.32,13.56,available
+1fa08914,Chipotle High St,Clintonville,6.19,13.33,available
+17a8fe3b,Popeyes Easton,Easton Area,4.44,10.27,available
+f7b6de9b,McDonald's Hudson,OSU Campus,4.17,9.8,available
+73332806,Chipotle High St,Clintonville,2.85,7.49,available
+067485f0,KFC Morse Rd,Short North,4.34,10.09,available
+4906efac,Wendy's Cleveland Ave,Short North,3.65,8.89,available
+5efeb90e,Chipotle High St,Worthington,3.71,8.99,available
+bae2990c,Taco Bell Karl Rd,Clintonville,7.04,14.82,available
+90276f70,Chipotle High St,Clintonville,3.01,7.77,available
+d861f807,Wendy's Cleveland Ave,Easton Area,1.56,5.23,available
+fca796ef,KFC Morse Rd,Clintonville,4.07,9.62,available
+f6290283,KFC Morse Rd,Clintonville,2.42,6.73,available
+3a1f7c81,Popeyes Easton,Easton Area,1.64,5.37,available
+c2dd3ffe,McDonald's Hudson,Clintonville,1.75,5.56,available
+93322ea4,Taco Bell Karl Rd,OSU Campus,7.05,14.84,available
+417f526d,Chipotle High St,Worthington,4.05,9.59,available
+69504d07,Popeyes Easton,OSU Campus,1.3,4.78,available
+eb084166,Chipotle High St,Easton Area,1.6,5.3,available
+1bc2c516,Taco Bell Karl Rd,Downtown Columbus,1.97,5.95,available
+0d6832be,Popeyes Easton,Worthington,4.94,11.15,available
+9c28a1c6,McDonald's Hudson,OSU Campus,4.05,9.59,available
+a3dbd65b,Popeyes Easton,Worthington,4.03,9.55,available
+b0ea0e7c,Chipotle High St,Clintonville,6.86,14.51,available
+d8d3b54b,KFC Morse Rd,Clintonville,4.4,10.2,available
+94a24db7,KFC Morse Rd,Clintonville,7.01,14.77,available
+bacec4eb,Chipotle High St,Clintonville,6.72,14.26,available
+72af2009,Popeyes Easton,Downtown Columbus,5.46,12.05,available
+f2bf2551,Popeyes Easton,Short North,5.54,12.2,available
+a841b535,Popeyes Easton,Easton Area,4.16,9.78,available
+60c17173,Popeyes Easton,Downtown Columbus,3.92,9.36,available
+08cfb690,KFC Morse Rd,Short North,6.84,14.47,available
+388bf4e5,Wendy's Cleveland Ave,Downtown Columbus,1.95,5.91,available
+bfff7f29,Taco Bell Karl Rd,Easton Area,3.24,8.17,available
+b064babe,Taco Bell Karl Rd,OSU Campus,1.57,5.25,available
+e9fcd228,KFC Morse Rd,Short North,4.52,10.41,available
+e48b2b36,McDonald's Hudson,Easton Area,2.03,6.05,available
+8374903c,Popeyes Easton,Clintonville,2.87,7.52,available
+4daab458,McDonald's Hudson,Short North,1.57,5.25,available
+70f24e37,Taco Bell Karl Rd,OSU Campus,2.5,6.88,available
+641dc346,Popeyes Easton,OSU Campus,3.62,8.84,available
+8f87428a,Popeyes Easton,Downtown Columbus,1.33,4.83,available
+938b6ca4,Wendy's Cleveland Ave,Short North,4.49,10.36,available
+2fa0d5c5,Popeyes Easton,Worthington,1.96,5.93,available
+6e173bff,Popeyes Easton,Short North,6.96,14.68,available
+a949a7b3,Taco Bell Karl Rd,Short North,5.38,11.91,available
+f9287be7,Popeyes Easton,Worthington,7.08,14.89,available
+98dc733b,KFC Morse Rd,OSU Campus,3.92,9.36,available
+aaf21a53,Wendy's Cleveland Ave,Easton Area,4.12,9.71,available
+3747cd3f,Taco Bell Karl Rd,Easton Area,5.83,12.7,available
+0b195cce,McDonald's Hudson,OSU Campus,4.43,10.25,available
+9bb53a51,Popeyes Easton,Clintonville,4.18,9.81,available
+5937f910,Popeyes Easton,Downtown Columbus,6.54,13.95,available
+a441e8af,Chipotle High St,Short North,2.46,6.8,available
+656be3a5,Taco Bell Karl Rd,Worthington,1.66,5.4,available
+b20ddc62,Wendy's Cleveland Ave,Worthington,6.02,13.04,available
+ff287b01,Chipotle High St,Downtown Columbus,5.61,12.32,available
+543777f5,Wendy's Cleveland Ave,Worthington,2.73,7.28,available
+34c0ac06,Wendy's Cleveland Ave,Easton Area,2.6,7.05,available
+9781bbbe,Popeyes Easton,Short North,2.71,7.24,available
+0111014f,Taco Bell Karl Rd,Clintonville,6.77,14.35,available
+12d57877,McDonald's Hudson,Easton Area,2.2,6.35,available
+753870c0,Wendy's Cleveland Ave,OSU Campus,4.41,10.22,available
+56103661,Chipotle High St,Easton Area,2.13,6.23,available
+f8f0258c,Popeyes Easton,Easton Area,5.11,11.44,available
+7c07b022,McDonald's Hudson,Clintonville,5.27,11.72,available
+f833fe40,Taco Bell Karl Rd,Easton Area,3.15,8.01,available
+03f4de32,Taco Bell Karl Rd,Clintonville,3.4,8.45,available
+d532e997,Chipotle High St,Downtown Columbus,1.28,4.74,available
+a7d209b7,Chipotle High St,Easton Area,5.63,12.35,available
+b571d452,Popeyes Easton,Downtown Columbus,1.74,5.54,available
+5ed34195,McDonald's Hudson,Short North,4.42,10.23,available
+bc14bd5c,KFC Morse Rd,Easton Area,3.85,9.24,available
+d6265d32,McDonald's Hudson,Worthington,6.58,14.02,available
+2a9482fd,KFC Morse Rd,OSU Campus,2.96,7.68,available
+3aca0958,Taco Bell Karl Rd,Short North,4.89,11.06,available
+e3cd7659,KFC Morse Rd,Short North,6.41,13.72,available
+c2be2c48,KFC Morse Rd,Clintonville,4.07,9.62,available
+a59ccb13,Popeyes Easton,Easton Area,5.21,11.62,available
+0d81ea6f,KFC Morse Rd,Downtown Columbus,3.71,8.99,available
+9d8fe8df,McDonald's Hudson,OSU Campus,2.69,7.21,available
+75fd82f2,Chipotle High St,Easton Area,7.06,14.85,available
+4d7656ef,Popeyes Easton,Clintonville,1.64,5.37,available
+35f68017,Chipotle High St,Short North,6.29,13.51,available
+45c17446,Taco Bell Karl Rd,Worthington,5.06,11.35,available
+30cc145a,Popeyes Easton,Easton Area,6.95,14.66,available
+fb4acc36,Chipotle High St,Clintonville,5.08,11.39,available
+0e208ae3,Popeyes Easton,Easton Area,5.86,12.76,available
+013431f8,KFC Morse Rd,Downtown Columbus,2.82,7.43,available
+35883bd6,Wendy's Cleveland Ave,Worthington,6.64,14.12,available
+e182d25f,Popeyes Easton,OSU Campus,4.96,11.18,available
+fc38aab1,Popeyes Easton,Easton Area,5.04,11.32,available
+a5e9fb09,Popeyes Easton,Short North,1.46,5.05,available
+7b112676,KFC Morse Rd,Easton Area,5.6,12.3,available
+28d728cc,Wendy's Cleveland Ave,Easton Area,6.52,13.91,available
+f54518a1,Wendy's Cleveland Ave,Worthington,4.63,10.6,available
+4c198c8a,McDonald's Hudson,Short North,4.85,10.99,available
+69743418,Chipotle High St,Worthington,6.44,13.77,available
+b4d8d6b7,KFC Morse Rd,Worthington,3.66,8.91,available
+a8cbef53,Taco Bell Karl Rd,Clintonville,2.81,7.42,available
+10edb42a,McDonald's Hudson,Worthington,6.62,14.09,available
+6ae02e03,Chipotle High St,Short North,6.74,14.29,available
+8a7146ed,Popeyes Easton,Worthington,6.51,13.89,available
+070588d5,Popeyes Easton,Short North,4.64,10.62,available
+808f6bae,KFC Morse Rd,Short North,4.03,9.55,available
+58b13f4d,Wendy's Cleveland Ave,Downtown Columbus,4.51,10.39,available
+302d2cd7,McDonald's Hudson,Downtown Columbus,1.57,5.25,available
+5810e19b,Wendy's Cleveland Ave,OSU Campus,5.42,11.98,available
+d5b5b48d,McDonald's Hudson,Clintonville,2.46,6.8,available
+0447ad8a,KFC Morse Rd,Downtown Columbus,5.52,12.16,available
+af1c9203,Chipotle High St,Easton Area,6.89,14.56,available
+75e6e01f,Wendy's Cleveland Ave,Short North,6.45,13.79,available
+159fc6f4,KFC Morse Rd,OSU Campus,1.37,4.9,available
+9f0fce7a,Taco Bell Karl Rd,Downtown Columbus,2.46,6.8,available
+33ad5137,KFC Morse Rd,Worthington,3.7,8.98,available
+58c5793b,KFC Morse Rd,Worthington,4.63,10.6,available
+8d61304e,Chipotle High St,Worthington,3.71,8.99,available
+5d53ceda,Taco Bell Karl Rd,OSU Campus,3.35,8.36,available
+1981e553,Chipotle High St,Downtown Columbus,2.14,6.25,available
+27508882,Popeyes Easton,Clintonville,4.64,10.62,available
+b4800d56,Wendy's Cleveland Ave,Easton Area,2.87,7.52,available
+86c9d82b,Taco Bell Karl Rd,Short North,2.05,6.09,available
+77a71c0d,Wendy's Cleveland Ave,OSU Campus,6.2,13.35,available
+31f69e87,Wendy's Cleveland Ave,Worthington,2.39,6.68,available
+de70819e,Wendy's Cleveland Ave,OSU Campus,7.08,14.89,available
+482e32c9,KFC Morse Rd,Easton Area,5.86,12.76,available
+e1929444,Taco Bell Karl Rd,Worthington,7.36,15.38,available
+92c5ea8c,McDonald's Hudson,Worthington,2.8,7.4,available
+561060f6,Chipotle High St,Easton Area,4.1,9.67,available
+8231ea89,Popeyes Easton,Worthington,7.09,14.91,available
+1f6b9c97,McDonald's Hudson,Short North,6.37,13.65,available
+050da6f6,Popeyes Easton,Worthington,1.34,4.85,available
+30694763,Wendy's Cleveland Ave,Downtown Columbus,5.12,11.46,available
+4085c589,Chipotle High St,Downtown Columbus,1.52,5.16,available
+45516057,Taco Bell Karl Rd,Worthington,2.96,7.68,available
+ce4010b8,Popeyes Easton,Worthington,6.46,13.8,available
+8ce76bad,Popeyes Easton,Clintonville,1.63,5.35,available
+a5c989f7,KFC Morse Rd,Downtown Columbus,4.63,10.6,available
+869df9d3,Popeyes Easton,OSU Campus,2.47,6.82,available
+5ec6978d,Popeyes Easton,Downtown Columbus,3.82,9.18,available
+a4719ca4,KFC Morse Rd,Downtown Columbus,6.32,13.56,available
+b0a0cfb4,Taco Bell Karl Rd,OSU Campus,7.36,15.38,available
+801a0a69,Wendy's Cleveland Ave,Clintonville,2.2,6.35,available
+7de668cb,Taco Bell Karl Rd,Easton Area,6.69,14.21,available
+ceafc24c,KFC Morse Rd,Worthington,2.77,7.35,available
+6b5097f3,McDonald's Hudson,Clintonville,6.46,13.8,available
+36312a21,KFC Morse Rd,Downtown Columbus,3.12,7.96,available
+375107a3,Wendy's Cleveland Ave,Downtown Columbus,2.66,7.16,available
+bf48977b,Taco Bell Karl Rd,Easton Area,4.44,10.27,available
+da9f0f19,McDonald's Hudson,Short North,6.64,14.12,available
+88277a48,Wendy's Cleveland Ave,Worthington,2.15,6.26,available
+20ff2aee,McDonald's Hudson,Easton Area,2.62,7.08,available
+8adc89c6,Popeyes Easton,Worthington,5.68,12.44,available
+3252f09b,Taco Bell Karl Rd,OSU Campus,1.67,5.42,available
+ae39665a,Wendy's Cleveland Ave,Short North,2.18,6.32,available
+f818e84f,KFC Morse Rd,Downtown Columbus,3.75,9.06,available
+a041dca7,Wendy's Cleveland Ave,Clintonville,2.4,6.7,available
+34d07313,Popeyes Easton,Easton Area,7.0,14.75,available
+c951d348,Taco Bell Karl Rd,Downtown Columbus,4.5,10.38,available
+47f215c3,McDonald's Hudson,Clintonville,5.61,12.32,available
+a6f17b89,McDonald's Hudson,OSU Campus,1.21,4.62,available
+a1ed558e,Taco Bell Karl Rd,Clintonville,4.98,11.21,available
+1de833d9,Chipotle High St,Worthington,1.55,5.21,available
+176d3173,McDonald's Hudson,Downtown Columbus,3.04,7.82,available
+f8324289,Chipotle High St,Worthington,3.91,9.34,available
+91406c1e,Chipotle High St,Clintonville,5.42,11.98,available
+337b4b35,Chipotle High St,Short North,3.6,8.8,available
+e45b5892,Chipotle High St,OSU Campus,4.39,10.18,available
+dccf8432,McDonald's Hudson,Worthington,5.9,12.83,available
+de66e679,Taco Bell Karl Rd,OSU Campus,3.02,7.79,available
+dba85e7e,KFC Morse Rd,OSU Campus,6.19,13.33,available
+618726e8,Chipotle High St,Clintonville,3.32,8.31,available
+54c077e6,McDonald's Hudson,Clintonville,2.63,7.1,available
+bd7650e5,Taco Bell Karl Rd,Clintonville,2.77,7.35,available
+91133bae,McDonald's Hudson,Clintonville,1.9,5.82,available
+d7a0197a,Taco Bell Karl Rd,Worthington,3.38,8.41,available
+d21e8684,Popeyes Easton,Downtown Columbus,1.83,5.7,available
+f343faba,McDonald's Hudson,Easton Area,7.15,15.01,available
+42f81a0d,Chipotle High St,Short North,1.39,4.93,available
+c410d65c,Popeyes Easton,OSU Campus,3.41,8.47,available
+a6391832,KFC Morse Rd,OSU Campus,5.34,11.84,available
+d9435c63,McDonald's Hudson,Downtown Columbus,6.76,14.33,available
+cf07475d,Taco Bell Karl Rd,Worthington,1.86,5.76,available
+408509d9,Wendy's Cleveland Ave,Short North,4.94,11.15,available
+97fd6695,McDonald's Hudson,Clintonville,4.48,10.34,available
+e7c3059e,McDonald's Hudson,Short North,4.63,10.6,available
+08955f1d,Chipotle High St,OSU Campus,7.26,15.21,available
+1627ff3e,KFC Morse Rd,Short North,2.47,6.82,available
+6be84163,Taco Bell Karl Rd,Clintonville,6.05,13.09,available
+f270ffbe,Taco Bell Karl Rd,OSU Campus,7.29,15.26,available
+02fb7bd0,KFC Morse Rd,Short North,5.57,12.25,available
+0c90ebd1,Taco Bell Karl Rd,Clintonville,4.07,9.62,available
+104bf4d6,McDonald's Hudson,Clintonville,3.58,8.77,available
+5e07e114,McDonald's Hudson,Short North,4.81,10.92,available
+18d424f0,Chipotle High St,Worthington,4.62,10.59,available
+b33fb752,Wendy's Cleveland Ave,Worthington,6.7,14.22,available
+33ff6db8,Wendy's Cleveland Ave,OSU Campus,5.94,12.9,available
+7d5cffe4,Wendy's Cleveland Ave,Worthington,2.06,6.11,available
+60418fe0,Wendy's Cleveland Ave,Worthington,4.99,11.23,available
+6ef2bc5e,Wendy's Cleveland Ave,Easton Area,7.22,15.13,available
+19be4f7d,Popeyes Easton,Easton Area,2.35,6.61,available
+84a473bd,KFC Morse Rd,Downtown Columbus,2.22,6.38,available
+11fdc8f6,Wendy's Cleveland Ave,Worthington,3.88,9.29,available
+6c010ffe,KFC Morse Rd,Clintonville,1.97,5.95,available
+e7934182,KFC Morse Rd,OSU Campus,5.65,12.39,available
+7cf572b5,Chipotle High St,OSU Campus,1.39,4.93,available
+f7bb8fc5,Popeyes Easton,Worthington,7.16,15.03,available
+659128b0,McDonald's Hudson,Worthington,5.48,12.09,available
+cc6d5aef,Wendy's Cleveland Ave,Downtown Columbus,3.73,9.03,available
+a016ed5e,Chipotle High St,Clintonville,2.28,6.49,available
+19cdcc0e,Chipotle High St,Clintonville,6.5,13.88,available
+49e03aa6,Wendy's Cleveland Ave,Short North,5.36,11.88,available
+16f1919a,Chipotle High St,Clintonville,1.65,5.39,available
+d6c0da3e,KFC Morse Rd,Downtown Columbus,1.47,5.07,available
+9a4f5c1f,McDonald's Hudson,Easton Area,2.2,6.35,available
+0d1b3d2a,Wendy's Cleveland Ave,Short North,6.62,14.09,available
+289f339b,Chipotle High St,Worthington,5.73,12.53,available
+caa135b5,Chipotle High St,OSU Campus,7.21,15.12,available
+edee0a06,Popeyes Easton,OSU Campus,3.73,9.03,available
+e0f85f37,KFC Morse Rd,OSU Campus,6.66,14.16,available
+9b29a028,Taco Bell Karl Rd,Easton Area,7.1,14.92,available
+2db465f7,McDonald's Hudson,OSU Campus,5.19,11.58,available
+bde7acb7,Popeyes Easton,Clintonville,4.12,9.71,available
+a704199b,Popeyes Easton,OSU Campus,5.12,11.46,available
+70011659,Chipotle High St,Easton Area,6.19,13.33,available
+b9844f94,Popeyes Easton,OSU Campus,1.95,5.91,available
+d54fa4a1,KFC Morse Rd,Easton Area,2.06,6.11,available
+726d0d5b,Wendy's Cleveland Ave,Worthington,1.76,5.58,available
+0ebb6f9b,Popeyes Easton,Easton Area,4.29,10.01,available
+f5aa0c09,Popeyes Easton,Downtown Columbus,1.81,5.67,available
+29b146aa,Taco Bell Karl Rd,Downtown Columbus,4.96,11.18,available
+ddcc2505,Taco Bell Karl Rd,Worthington,5.22,11.63,available
+7fec13d3,Popeyes Easton,Short North,6.19,13.33,available
+1ef54724,KFC Morse Rd,Easton Area,6.3,13.53,available
+e87a69c6,Taco Bell Karl Rd,Worthington,7.37,15.4,available
+9dff3a1c,Chipotle High St,Clintonville,5.93,12.88,available
+5c3446f4,Chipotle High St,Easton Area,3.96,9.43,available
+6a95f94f,KFC Morse Rd,Worthington,2.51,6.89,available
+f9db0d7b,McDonald's Hudson,Clintonville,5.14,11.49,available
+b81bfb36,Wendy's Cleveland Ave,Worthington,2.28,6.49,available
+a6f3a9c8,Wendy's Cleveland Ave,OSU Campus,2.09,6.16,available
+d3a0ccec,Wendy's Cleveland Ave,Easton Area,4.07,9.62,available
+655073e9,Wendy's Cleveland Ave,OSU Campus,6.63,14.1,available
+e277a112,Popeyes Easton,Clintonville,2.48,6.84,available
+0ab8cac4,McDonald's Hudson,OSU Campus,6.38,13.66,available
+beda7f71,Wendy's Cleveland Ave,OSU Campus,1.61,5.32,available
+d5cf8b69,Taco Bell Karl Rd,Easton Area,7.22,15.13,available
+7b5ba6ae,Chipotle High St,Easton Area,2.7,7.23,available
+d06a67a2,Taco Bell Karl Rd,Short North,3.69,8.96,available
+6aa7dc55,Popeyes Easton,Easton Area,4.7,10.72,available
+31c9c33d,KFC Morse Rd,Downtown Columbus,7.36,15.38,available
+37c96d5e,Taco Bell Karl Rd,Easton Area,5.9,12.83,available
+f2adee55,KFC Morse Rd,Easton Area,6.15,13.26,available
+cd6b53c3,Wendy's Cleveland Ave,Easton Area,2.59,7.03,available
+744b2a18,Wendy's Cleveland Ave,Worthington,6.91,14.59,available
+0bbb28e9,Popeyes Easton,Clintonville,6.24,13.42,available
+96a0422b,Chipotle High St,Clintonville,6.93,14.63,available
+32c861ce,Wendy's Cleveland Ave,Short North,7.28,15.24,available
+9184e9a4,Wendy's Cleveland Ave,Downtown Columbus,5.05,11.34,available
+6a1fee60,McDonald's Hudson,Worthington,6.47,13.82,available
+22924f54,Taco Bell Karl Rd,Clintonville,2.99,7.73,available
+ac43b11c,McDonald's Hudson,Downtown Columbus,1.65,5.39,available
+12a084bd,Chipotle High St,Downtown Columbus,4.0,9.5,available
+c3e46a28,McDonald's Hudson,Clintonville,7.42,15.48,available
+b645d5ea,KFC Morse Rd,Short North,6.7,14.22,available
+2a949795,McDonald's Hudson,OSU Campus,6.72,14.26,available
+c5d3ddde,Popeyes Easton,Short North,1.3,4.78,available
+ab11f9cc,Chipotle High St,Clintonville,3.18,8.07,available
+8f9d06c2,Taco Bell Karl Rd,Short North,5.03,11.3,available
+f163eadf,Taco Bell Karl Rd,Clintonville,2.42,6.73,available
+9c8c3a16,Wendy's Cleveland Ave,Easton Area,7.26,15.21,available
+f064d806,Wendy's Cleveland Ave,Short North,5.83,12.7,available
+b1e1ac26,Popeyes Easton,OSU Campus,7.07,14.87,available
+8bc2b4b1,KFC Morse Rd,Worthington,1.73,5.53,available
+47d434ee,Wendy's Cleveland Ave,Downtown Columbus,6.88,14.54,available
+58c2e1dd,Chipotle High St,Downtown Columbus,6.48,13.84,available
+6c3fe8e4,Popeyes Easton,Downtown Columbus,7.11,14.94,available
+cf2b8f12,McDonald's Hudson,Short North,1.25,4.69,available
+5e98d632,KFC Morse Rd,Downtown Columbus,4.43,10.25,available
+ed9ab394,Popeyes Easton,OSU Campus,3.78,9.11,available
+f27ab498,Popeyes Easton,OSU Campus,6.1,13.17,available
+04da4cf4,Chipotle High St,Worthington,6.95,14.66,available
+4b6ae0d0,Chipotle High St,Easton Area,6.06,13.1,available
+ffd07ae9,Wendy's Cleveland Ave,Downtown Columbus,4.86,11.01,available
+8a243e2d,Wendy's Cleveland Ave,Clintonville,4.77,10.85,available
+06e0ea96,Wendy's Cleveland Ave,OSU Campus,4.69,10.71,available
+a04edd76,Taco Bell Karl Rd,OSU Campus,5.26,11.71,available
+eea23077,KFC Morse Rd,Downtown Columbus,4.19,9.83,available
+ca053855,Popeyes Easton,Downtown Columbus,1.36,4.88,available
+cfee6676,KFC Morse Rd,Downtown Columbus,4.82,10.94,available
+a0e31681,Wendy's Cleveland Ave,Short North,6.49,13.86,available
+5e376bc7,Wendy's Cleveland Ave,OSU Campus,2.66,7.16,available
+9e8d8d9b,KFC Morse Rd,Easton Area,5.75,12.56,available
+2d2e4ef8,Taco Bell Karl Rd,Downtown Columbus,4.09,9.66,available
+3584f6f3,McDonald's Hudson,Worthington,2.65,7.14,available
+2048809e,Popeyes Easton,Easton Area,6.91,14.59,available
+6634d7d4,KFC Morse Rd,Worthington,4.97,11.2,available
+5c587f59,Taco Bell Karl Rd,Worthington,5.32,11.81,available
+2d7664c3,Chipotle High St,Downtown Columbus,3.0,7.75,available
+fb8898f3,Popeyes Easton,OSU Campus,5.7,12.47,available
+032b3836,Popeyes Easton,Worthington,2.3,6.52,available
+b8843999,Chipotle High St,Downtown Columbus,3.02,7.79,available
+aa1ee3d1,KFC Morse Rd,Downtown Columbus,1.67,5.42,available
+7373ca98,Taco Bell Karl Rd,Worthington,4.22,9.88,available
+b78c76e4,McDonald's Hudson,Clintonville,6.81,14.42,available
+703c6233,Taco Bell Karl Rd,Worthington,7.2,15.1,available
+d6ebae25,Taco Bell Karl Rd,Worthington,2.44,6.77,available
+c8df0bd1,McDonald's Hudson,Easton Area,2.57,7.0,available
+64fc91fe,Taco Bell Karl Rd,Short North,6.49,13.86,available
+e1d93ddd,KFC Morse Rd,Worthington,6.06,13.1,available
+7bf0303a,Wendy's Cleveland Ave,Worthington,1.51,5.14,available
+15189027,Popeyes Easton,Short North,3.53,8.68,available
+bed51103,McDonald's Hudson,Downtown Columbus,7.14,14.99,available
+d9e756ff,Popeyes Easton,Worthington,4.33,10.08,available
+f1ce3064,KFC Morse Rd,Downtown Columbus,6.84,14.47,available
+7d940689,McDonald's Hudson,OSU Campus,6.45,13.79,available
+23f6f0e9,Chipotle High St,Clintonville,3.31,8.29,available
+cb7d408c,Taco Bell Karl Rd,OSU Campus,1.26,4.71,available
+1016b7a7,Wendy's Cleveland Ave,Worthington,6.32,13.56,available
+9f45e5cd,Chipotle High St,OSU Campus,3.34,8.34,available
+259422f2,Wendy's Cleveland Ave,Clintonville,2.49,6.86,available
+ba200dcc,Chipotle High St,Downtown Columbus,5.21,11.62,available
+5a91ce03,Popeyes Easton,Easton Area,3.44,8.52,available
+474ab4f7,Popeyes Easton,Downtown Columbus,6.77,14.35,available
+413abd45,McDonald's Hudson,Short North,5.17,11.55,available
+7bf0f719,McDonald's Hudson,Clintonville,7.33,15.33,available
+f183a51c,Popeyes Easton,Easton Area,2.19,6.33,available
+fde56552,KFC Morse Rd,Short North,1.62,5.33,available
+da7c0b4e,Chipotle High St,Easton Area,5.43,12.0,available
+53706e9d,Wendy's Cleveland Ave,Worthington,1.84,5.72,available
+8dc422a7,Wendy's Cleveland Ave,Easton Area,3.17,8.05,available
+09108247,KFC Morse Rd,Clintonville,6.67,14.17,available
+3761bd93,Wendy's Cleveland Ave,Clintonville,1.42,4.98,available
+9583e718,Taco Bell Karl Rd,Downtown Columbus,2.61,7.07,available
+a1cdf7b1,McDonald's Hudson,Easton Area,3.21,8.12,available
+6ae9e386,Chipotle High St,Worthington,1.56,5.23,available
+d9908555,McDonald's Hudson,OSU Campus,2.85,7.49,available
+cee8659d,Popeyes Easton,Worthington,4.63,10.6,available
+d506f273,Taco Bell Karl Rd,Downtown Columbus,5.34,11.84,available
+5fb4eb7a,Chipotle High St,Short North,3.57,8.75,available
+47291b5b,Wendy's Cleveland Ave,OSU Campus,3.11,7.94,available
+694ec429,KFC Morse Rd,Short North,3.27,8.22,available
+3bbce391,Chipotle High St,Easton Area,5.11,11.44,available
+c73c4c2c,KFC Morse Rd,Downtown Columbus,3.01,7.77,available
+bef050e0,Popeyes Easton,Downtown Columbus,2.22,6.38,available
+c4ab129f,Chipotle High St,Clintonville,5.48,12.09,available
+934a465b,Chipotle High St,Clintonville,5.16,11.53,available
+06d81664,Popeyes Easton,Easton Area,4.76,10.83,available
+c9d3ade5,Popeyes Easton,Downtown Columbus,5.07,11.37,available
+df6b80c0,Popeyes Easton,Short North,3.69,8.96,available
+1181248f,Taco Bell Karl Rd,Short North,4.72,10.76,available
+3824b1cd,Popeyes Easton,OSU Campus,2.01,6.02,available
+89b4ad5a,Chipotle High St,Worthington,3.32,8.31,available
+eb7b77ab,Chipotle High St,Worthington,3.9,9.32,available
+a7e275d9,Popeyes Easton,Worthington,4.42,10.23,available
+e86ae708,Chipotle High St,OSU Campus,6.7,14.22,available
+95625214,Taco Bell Karl Rd,Downtown Columbus,6.05,13.09,available
+51e32b30,Chipotle High St,OSU Campus,5.61,12.32,available
+8fb27821,Taco Bell Karl Rd,Downtown Columbus,2.45,6.79,available
+900ed307,McDonald's Hudson,Clintonville,3.32,8.31,available
+3f2977fc,KFC Morse Rd,Clintonville,1.26,4.71,available
+94d0f897,KFC Morse Rd,OSU Campus,7.25,15.19,available
+2f6f3298,KFC Morse Rd,Downtown Columbus,6.39,13.68,available
+11d9bae3,Taco Bell Karl Rd,Downtown Columbus,2.74,7.29,available
+496cb18b,McDonald's Hudson,Downtown Columbus,5.07,11.37,available
+1a9c8efd,Taco Bell Karl Rd,Clintonville,1.28,4.74,available
+69676965,Chipotle High St,Short North,1.52,5.16,available
+3c6dc081,McDonald's Hudson,Short North,4.9,11.08,available
+1ebf9aa3,KFC Morse Rd,Downtown Columbus,4.11,9.69,available
+5185ef9d,Taco Bell Karl Rd,Clintonville,5.08,11.39,available
+cf998948,Chipotle High St,Easton Area,7.14,14.99,available
+cdfa662e,Popeyes Easton,Easton Area,2.7,7.23,available
+c0b8b6c4,Chipotle High St,Easton Area,7.45,15.54,available
+613d236d,McDonald's Hudson,Worthington,6.97,14.7,available
+467ddd25,Wendy's Cleveland Ave,OSU Campus,1.34,4.85,available
+9408ba92,Wendy's Cleveland Ave,Clintonville,3.45,8.54,available
+e6bde015,Taco Bell Karl Rd,Short North,3.2,8.1,available
+bcbfa855,McDonald's Hudson,Downtown Columbus,2.76,7.33,available
+f842cf09,Chipotle High St,Worthington,5.48,12.09,available
+9ecb8463,McDonald's Hudson,Short North,3.29,8.26,available
+58cf355b,McDonald's Hudson,Worthington,1.94,5.89,available
+2ac29533,Taco Bell Karl Rd,Easton Area,2.52,6.91,available
+c709c1ab,Chipotle High St,Easton Area,5.27,11.72,available
+82ab8866,Taco Bell Karl Rd,OSU Campus,2.59,7.03,available
+35c12543,McDonald's Hudson,Easton Area,7.32,15.31,available
+9ad0fb0c,Chipotle High St,OSU Campus,3.74,9.04,available
+9058ef20,McDonald's Hudson,Clintonville,6.27,13.47,available
+5d02ea74,Popeyes Easton,Short North,1.77,5.6,available
+5398a2c5,Wendy's Cleveland Ave,Worthington,3.22,8.14,available
+736d5a5b,Wendy's Cleveland Ave,OSU Campus,4.12,9.71,available
+0f25e3e5,KFC Morse Rd,Easton Area,2.48,6.84,available
+3dae7b97,Popeyes Easton,Downtown Columbus,3.31,8.29,available
+a4ea05bf,KFC Morse Rd,Clintonville,1.67,5.42,available
+7b2d7384,KFC Morse Rd,OSU Campus,5.53,12.18,available
+ec1dfdba,Wendy's Cleveland Ave,Clintonville,5.95,12.91,available
+eb17d88d,Chipotle High St,Clintonville,5.16,11.53,available
+7a9179e5,McDonald's Hudson,OSU Campus,4.47,10.32,available
+b223e3da,Popeyes Easton,Downtown Columbus,3.39,8.43,available
+aa7c6909,Chipotle High St,Short North,4.46,10.3,available
+b618d5f0,Taco Bell Karl Rd,Easton Area,6.89,14.56,available
+34af7331,Popeyes Easton,Worthington,4.79,10.88,available
+f2003d11,McDonald's Hudson,Downtown Columbus,2.25,6.44,available
+0d757c92,McDonald's Hudson,Worthington,6.76,14.33,available
+c59393b0,Popeyes Easton,Clintonville,1.44,5.02,available
+965b44bb,Wendy's Cleveland Ave,Downtown Columbus,7.32,15.31,available
+77abbbcf,Wendy's Cleveland Ave,Downtown Columbus,6.96,14.68,available
+1a3ca3f8,McDonald's Hudson,Short North,4.35,10.11,available
+47a995a8,Popeyes Easton,Downtown Columbus,5.38,11.91,available
+16e288e4,McDonald's Hudson,Easton Area,1.28,4.74,available
+072d1dda,McDonald's Hudson,Easton Area,4.69,10.71,available
+93b47668,Chipotle High St,OSU Campus,7.2,15.1,available
+49367a3a,Popeyes Easton,Clintonville,3.63,8.85,available
+3d700485,McDonald's Hudson,Downtown Columbus,7.18,15.06,available
+bbe2eeb1,KFC Morse Rd,Clintonville,3.61,8.82,available
+f89a519d,Popeyes Easton,Worthington,2.68,7.19,available
+e76c5500,KFC Morse Rd,Easton Area,7.42,15.48,available
+aec48de6,Wendy's Cleveland Ave,Easton Area,4.51,10.39,available
+529fdbc8,Taco Bell Karl Rd,Downtown Columbus,3.55,8.71,available
+a75bd74c,Popeyes Easton,Worthington,2.5,6.88,available
+79be6a47,Taco Bell Karl Rd,Worthington,3.69,8.96,available
+144138bd,McDonald's Hudson,Worthington,3.25,8.19,available
+6d4fed43,KFC Morse Rd,Short North,3.0,7.75,available
+79a1f239,McDonald's Hudson,Short North,6.92,14.61,available
+ed3fa644,Wendy's Cleveland Ave,Easton Area,2.42,6.73,available
+21a15260,KFC Morse Rd,Short North,5.78,12.62,available
+444cb01c,Popeyes Easton,Short North,6.11,13.19,available
+ac28cabc,Popeyes Easton,Downtown Columbus,7.22,15.13,available
+417f1fd9,Chipotle High St,Easton Area,1.3,4.78,available
+3f4249ec,Popeyes Easton,Easton Area,3.05,7.84,available
+456cd757,Popeyes Easton,Downtown Columbus,6.28,13.49,available
+8e8a6bc1,Popeyes Easton,Worthington,6.95,14.66,available
+ef2a3519,Chipotle High St,Short North,3.75,9.06,available
+7d94723a,McDonald's Hudson,OSU Campus,3.68,8.94,available
+c9a8d705,Wendy's Cleveland Ave,Worthington,4.62,10.59,available
+2366fe2e,McDonald's Hudson,Worthington,4.76,10.83,available
+124892a3,Taco Bell Karl Rd,Clintonville,1.29,4.76,available
+aa589c09,Taco Bell Karl Rd,Easton Area,5.8,12.65,available
+88cd08ce,Popeyes Easton,OSU Campus,6.55,13.96,available
+ccfa4d6f,Taco Bell Karl Rd,OSU Campus,5.28,11.74,available
+b48b19c2,Popeyes Easton,OSU Campus,7.0,14.75,available
+ee1c93ff,McDonald's Hudson,Clintonville,1.22,4.63,available
+08dce734,Taco Bell Karl Rd,Clintonville,4.42,10.23,available
+8f4f9291,KFC Morse Rd,Clintonville,1.24,4.67,available
+88f9ec82,Taco Bell Karl Rd,Easton Area,5.44,12.02,available
+77ac31bd,Popeyes Easton,OSU Campus,6.59,14.03,available
+d6197202,McDonald's Hudson,Short North,6.31,13.54,available
+dc9814b8,McDonald's Hudson,Worthington,7.12,14.96,available
+29227bb4,Wendy's Cleveland Ave,Short North,1.34,4.85,available
+b4cea72a,Wendy's Cleveland Ave,Worthington,3.72,9.01,available
+5d474657,KFC Morse Rd,Worthington,5.0,11.25,available
+132531f2,Taco Bell Karl Rd,Clintonville,3.68,8.94,available
+e06d6f92,Chipotle High St,Worthington,1.89,5.81,available
+8d76fe4a,KFC Morse Rd,OSU Campus,1.23,4.65,available
+b326b04e,Popeyes Easton,OSU Campus,2.53,6.93,available
+437c15cb,Taco Bell Karl Rd,OSU Campus,1.45,5.04,available
+bba8c860,KFC Morse Rd,Clintonville,7.32,15.31,available
+a5309f76,McDonald's Hudson,Short North,7.4,15.45,available
+dd6cce68,Taco Bell Karl Rd,Easton Area,6.57,14.0,available
+89e44899,Popeyes Easton,Short North,5.94,12.9,available
+3a6d5615,Wendy's Cleveland Ave,Worthington,1.68,5.44,available
+209f0148,Wendy's Cleveland Ave,Worthington,4.28,9.99,available
+6d744868,Wendy's Cleveland Ave,Downtown Columbus,5.32,11.81,available
+958e176b,McDonald's Hudson,Easton Area,7.23,15.15,available
+b4e55fc5,Chipotle High St,Worthington,4.58,10.52,available
+4ab63837,Popeyes Easton,Downtown Columbus,2.9,7.58,available
+a0911f74,Chipotle High St,Easton Area,7.3,15.28,available
+a6136aa8,McDonald's Hudson,OSU Campus,1.41,4.97,available
+b699c800,Taco Bell Karl Rd,Worthington,3.35,8.36,available
+c6c3e35e,McDonald's Hudson,Easton Area,5.54,12.2,available
+2eda07a2,Taco Bell Karl Rd,Clintonville,1.43,5.0,available
+2ffc38cf,Chipotle High St,Worthington,2.42,6.73,available
+405e4d50,Wendy's Cleveland Ave,Worthington,3.09,7.91,available
+d783f48c,Popeyes Easton,Short North,4.27,9.97,available
+bdc9d94f,KFC Morse Rd,Clintonville,6.38,13.66,available
+b5b7c283,Chipotle High St,Worthington,3.74,9.04,available
+cb8325e6,KFC Morse Rd,Downtown Columbus,2.76,7.33,available
+94d1d065,Taco Bell Karl Rd,Easton Area,3.86,9.25,available
+360f8dbb,KFC Morse Rd,OSU Campus,4.27,9.97,available
+d0de615f,McDonald's Hudson,Downtown Columbus,7.49,15.61,available
+d25ca7c7,Taco Bell Karl Rd,Worthington,5.09,11.41,available
+8b77146f,KFC Morse Rd,Easton Area,3.38,8.41,available
+1b33129a,Popeyes Easton,OSU Campus,7.42,15.48,available
+7eae48f8,McDonald's Hudson,Worthington,1.75,5.56,available
+eeaa3490,Wendy's Cleveland Ave,OSU Campus,6.93,14.63,available
+3beea364,Chipotle High St,Short North,3.51,8.64,available
+b1fad1ca,Wendy's Cleveland Ave,Easton Area,7.27,15.22,available
+269ff333,McDonald's Hudson,Worthington,2.67,7.17,available
+62ce6cd6,KFC Morse Rd,Downtown Columbus,1.75,5.56,available
+7c3e1cd1,Wendy's Cleveland Ave,Short North,5.04,11.32,available
+8c60bde3,Taco Bell Karl Rd,Short North,1.66,5.4,available
+294f11a3,Chipotle High St,OSU Campus,7.05,14.84,available
+9647b0ef,Chipotle High St,Downtown Columbus,5.7,12.47,available
+33448614,Wendy's Cleveland Ave,Downtown Columbus,5.65,12.39,available
+d485aea7,Wendy's Cleveland Ave,Clintonville,6.83,14.45,available
+bea585a6,Popeyes Easton,Downtown Columbus,5.81,12.67,available
+e2779fa3,Popeyes Easton,Short North,1.59,5.28,available
+1b1d357c,Taco Bell Karl Rd,OSU Campus,7.14,14.99,available
+c693eca5,Taco Bell Karl Rd,Downtown Columbus,2.5,6.88,available
+aca27b43,Taco Bell Karl Rd,Worthington,7.04,14.82,available
+2d585e29,KFC Morse Rd,Worthington,6.2,13.35,available
+557eb76c,Wendy's Cleveland Ave,Easton Area,3.11,7.94,available
+ad15ddc4,Taco Bell Karl Rd,Clintonville,4.88,11.04,available
+4f83f644,Wendy's Cleveland Ave,Clintonville,3.85,9.24,available
+4c064a88,KFC Morse Rd,OSU Campus,1.42,4.98,available
+ba4492db,KFC Morse Rd,OSU Campus,5.4,11.95,available
+4d58ac52,Chipotle High St,Worthington,7.31,15.29,available
+2c299d30,Wendy's Cleveland Ave,Short North,4.53,10.43,available
+9efb1d87,Popeyes Easton,Clintonville,5.69,12.46,available
+4e140b38,Wendy's Cleveland Ave,Clintonville,4.93,11.13,available
+828ddc14,Popeyes Easton,Worthington,7.36,15.38,available
+0a26cae3,KFC Morse Rd,Short North,6.45,13.79,available
+6dd3d504,KFC Morse Rd,Clintonville,2.44,6.77,available
+b81ca939,Wendy's Cleveland Ave,Downtown Columbus,1.95,5.91,available
+c3acdad3,Taco Bell Karl Rd,Clintonville,6.15,13.26,available
+5ccc8bdc,Popeyes Easton,Clintonville,6.23,13.4,available
+0e424aad,Wendy's Cleveland Ave,Downtown Columbus,2.24,6.42,available
+cfa29550,KFC Morse Rd,Worthington,4.78,10.87,available
+5dbd878d,Wendy's Cleveland Ave,Downtown Columbus,6.11,13.19,available
+6ec4cff9,Wendy's Cleveland Ave,Short North,4.78,10.87,available
+df3d9fd7,Taco Bell Karl Rd,Clintonville,3.06,7.86,available
+fdda7564,Popeyes Easton,Downtown Columbus,4.88,11.04,available
+4727877a,Chipotle High St,Clintonville,4.27,9.97,available
+32ff4422,Taco Bell Karl Rd,Short North,1.51,5.14,available
+2abf85d1,Popeyes Easton,OSU Campus,5.28,11.74,available
+1d0b7146,KFC Morse Rd,Short North,5.06,11.35,available
+97225f13,Popeyes Easton,Downtown Columbus,5.17,11.55,available
+6a53ea44,McDonald's Hudson,Clintonville,7.22,15.13,available
+8d75b1bd,Chipotle High St,Easton Area,4.08,9.64,available
+190577da,Wendy's Cleveland Ave,Easton Area,1.36,4.88,available
+7cad070c,KFC Morse Rd,Clintonville,6.15,13.26,available
+11b9dfa4,Chipotle High St,Worthington,3.53,8.68,available
+758b513c,Taco Bell Karl Rd,Clintonville,7.17,15.05,available
+d7ed95d3,Chipotle High St,Clintonville,1.59,5.28,available

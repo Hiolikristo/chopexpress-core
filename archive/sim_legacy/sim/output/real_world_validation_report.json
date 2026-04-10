@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "total_observations": 4,
+    "avg_validation_score": 67.5,
+    "good_accept_count": 0,
+    "good_decline_count": 1,
+    "bad_accept_count": 1,
+    "missed_good_offer_count": 0,
+    "borderline_accept_count": 2,
+    "borderline_decline_count": 0
+  },
+  "results": [
+    {
+      "observation_id": "obs_tim_001",
+      "session_id": "lunch_001",
+      "merchant_name": "Tim Hortons",
+      "zone": "South Columbus",
+      "recommended_action": "borderline",
+      "actual_driver_action": "accepted",
+      "hindsight_label": "borderline_accept",
+      "validation_score": 70.0,
+      "offered_pay_total": 6.8,
+      "offered_miles": 2.2,
+      "economic_miles": 3.0,
+      "burden_minutes": 1.0,
+      "modeled_total_minutes": 9.84,
+      "effective_hourly": 41.46,
+      "minimum_driver_pay": 8.5,
+      "pay_gap": -1.7,
+      "score": 78.0,
+      "reasons": [
+        "below_minimum_driver_pay"
+      ],
+      "notes": [
+        "Driver accepted a borderline offer."
+      ]
+    },
+    {
+      "observation_id": "obs_coffee_002",
+      "session_id": "lunch_001",
+      "merchant_name": "Main Ground Coffee",
+      "zone": "Blacklick / Eastland edge",
+      "recommended_action": "decline",
+      "actual_driver_action": "declined",
+      "hindsight_label": "good_decline",
+      "validation_score": 100.0,
+      "offered_pay_total": 7.3,
+      "offered_miles": 5.4,
+      "economic_miles": 7.7,
+      "burden_minutes": 0.0,
+      "modeled_total_minutes": 22.64,
+      "effective_hourly": 19.35,
+      "minimum_driver_pay": 14.2,
+      "pay_gap": -6.9,
+      "score": 28.0,
+      "reasons": [
+        "hard_under_minimum_pay_decline",
+        "weak_economic_mile",
+        "borderline_effective_hourly",
+        "acceptance_rate_pressure_seen"
+      ],
+      "notes": [
+        "Driver declined and engine also recommended decline."
+      ]
+    },
+    {
+      "observation_id": "obs_kfc_003",
+      "session_id": "lunch_001",
+      "merchant_name": "KFC",
+      "zone": "Groveport",
+      "recommended_action": "borderline",
+      "actual_driver_action": "accepted",
+      "hindsight_label": "borderline_accept",
+      "validation_score": 70.0,
+      "offered_pay_total": 9.8,
+      "offered_miles": 7.0,
+      "economic_miles": 7.13,
+      "burden_minutes": 3.0,
+      "modeled_total_minutes": 24.36,
+      "effective_hourly": 24.14,
+      "minimum_driver_pay": 13.94,
+      "pay_gap": -4.14,
+      "score": 62.0,
+      "reasons": [
+        "hard_under_minimum_pay_decline"
+      ],
+      "notes": [
+        "Driver accepted a borderline offer."
+      ]
+    },
+    {
+      "observation_id": "obs_hurley_jj_004",
+      "session_id": "dinner_001",
+      "merchant_name": "Jimmy John's",
+      "zone": "Canal Winchester",
+      "recommended_action": "decline",
+      "actual_driver_action": "accepted",
+      "hindsight_label": "bad_accept",
+      "validation_score": 30.0,
+      "offered_pay_total": 7.1,
+      "offered_miles": 5.8,
+      "economic_miles": 7.1,
+      "burden_minutes": 2.0,
+      "modeled_total_minutes": 23.04,
+      "effective_hourly": 18.49,
+      "minimum_driver_pay": 13.61,
+      "pay_gap": -6.51,
+      "score": 21.0,
+      "reasons": [
+        "hard_under_minimum_pay_decline",
+        "weak_economic_mile",
+        "borderline_offered_mile",
+        "borderline_effective_hourly"
+      ],
+      "notes": [
+        "Driver accepted an offer engine marked decline."
+      ]
+    }
+  ]
+}

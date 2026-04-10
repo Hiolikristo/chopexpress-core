@@ -1,0 +1,20 @@
+{
+  "label": "local_test_run",
+  "total_orders": 120,
+  "approved_orders": 118,
+  "rejected_orders": 2,
+  "approval_rate": 0.9833,
+  "total_offer_pay": 2182.89,
+  "total_economic_miles": 911.46,
+  "avg_ppem": 2.39,
+  "avg_net_profit": 14.65,
+  "avg_hourly_rate": 42.61,
+  "pickup_zone_counts": {
+    "Polaris": 15,
+    "Westerville": 18,
+    "Easton": 26,
+    "Clintonville": 21,
+    "Gahanna": 9,
+    "Downtown": 31
+  }
+}
